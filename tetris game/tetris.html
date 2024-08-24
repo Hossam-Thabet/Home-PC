@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tetris</title>
+  <style>
+    #canvas { background-color: black; }
+  </style>
+</head>
+<body>
+  <canvas id="canvas" width="300" height="600"></canvas>
+  <script>
+    
+    // Define the tetrominoes
+var i = { blocks: [0x0F00, 0x2222, 0x00F0, 0x4444], color: 'cyan'   };
+var j = { blocks: [0x44C0, 0x8E00, 0x6440, 0x0E20], color: 'blue'   };
+var l = { blocks: [0x4460, 0x0E80, 0xC440, 0x2E00], color: 'orange' };
+var o = { blocks: [0xCC00, 0xCC00, 0xCC00, 0xCC00], color: 'yellow' };
+var s = { blocks: [0x06C0, 0x8C40, 0x6C00, 0x4620], color: 'green'  };
+var t = { blocks: [0x0E40, 0x4C40, 0x4E00, 0x4640], color: 'purple' };
+var z = { blocks: [0x0C60, 0x4C80, 0xC600, 0x2640], color: 'red'    };
+
+var pieces = [i,j,l,o,s,t,z];
+
+// Helper functions
+function eachblock(type, x, y, dir, fn) {
+  var bit, result, row = 0, col = 0, blocks = type.blocks[dir];
+  for(bit = 0x8000 ; bit > 0 ; bit = bit >> 1) {
+    if (blocks & bit) {
+      fn(x + col, y + row);
+    }
+    if (++col === 4) {
+      col = 0;
+      ++row;
+    }
+  }
+};
+
+function occupied(type, x, y, dir) {
+  var result = false
+  eachblock(type, x, y, dir, function(x, y) {
+    if ((x < 0) || (x >= nx) || (y < 0) || (y >= ny) || getBlock(x,y))
+      result = true;
+  });
+  return result;
+};
+
+function unoccupied(type, x, y, dir) {
+  return !occupied(type, x, y, dir);
+};
+
+// Game variables
+var KEY     = { ESC: 27, SPACE: 32, LEFT: 37, UP: 38, RIGHT: 39, DOWN: 40 },
+    DIR     = { UP: 0, RIGHT: 1, DOWN: 2, LEFT: 3, MIN: 0, MAX: 3 },
+    stats   = new Stats(),
+    canvas  = document.getElementById('canvas'),
+    ctx     = canvas.getContext('2d'),
+    nx      = 10, // width of tetris court (in blocks)
+    ny      = 20, // height of tetris court (in blocks)
+    blocks  = new Array(nx);
+
+for (var i = 0; i < nx; i++) {
+  blocks[i] = new Array(ny);
+  for (var j = 0; j < ny; j++) {
+    blocks[i][j] = null;
+  }
+}
+
+var actions = [];
+var playing = false;
+var dt = 0;
+var current = null;
+var next = randomPiece();
+var score = 0;
+var rows = 0;
+var step = 1;
+
+// Getters and setters
+function setBlock(x,y,type) {
+  blocks[x][y] = type;
+}
+
+function getBlock(x,y) {
+  return blocks[x][y];
+}
+
+function setCurrentPiece(piece) {
+  current = piece;
+}
+
+function setNextPiece() {
+  next = randomPiece();
+}
+
+// Main game loop
+function frame() {
+  update((now - last) / 1000.0);
+  draw();
+  last = now;
+  requestAnimationFrame(frame(), canvas);
+}
+ frame();
+
+// Keyboard input
+document.addEventListener('keydown', function(ev) {
+  if (playing) {
+    switch(ev.keyCode) {
+      case KEY.LEFT:   actions.push(DIR.LEFT);  break;
+      case KEY.RIGHT:  actions.push(DIR.RIGHT); break;
+      case KEY.UP:     actions.push(DIR.UP);    break;
+      case KEY.DOWN:   actions.push(DIR.DOWN);  break;
+      case KEY.ESC:    lose();                  break;
+    }
+  }
+  else if (ev.keyCode == KEY.SPACE) {
+    play();
+  }
+});
+
+// Helper functions for updating game state
+          function update(idt) {
+            if (playing) {
+              handle(actions.shift());
+              dt = dt + idt;
+              if (dt > step) {
+                dt = dt - step;
+                drop();
+              } 
+            }
+          };
+
+function handle(action) {
+  switch(action) {
+    case DIR.LEFT:  move(DIR.LEFT);  break;
+    case DIR.RIGHT: move(DIR.RIGHT); break;
+    case DIR.UP:    rotate();        break;
+    case DIR.DOWN:  drop();          break;
+  }
+};
+
+function move(dir) {
+  var x = current.x, y = current.y;
+  switch(dir) {
+    case DIR.RIGHT:++x; break;
+    case DIR.LEFT:  --x; break;
+  }
+  if (unoccupied(current, x, y, current.dir)) {
+    current.x = x;
+ }
+};
+
+function rotate() {
+  var dir = current.dir;
+  dir = (dir + 1) % 4;
+  if (unoccupied(current, current.x, current.y, dir)) {
+    current.dir = dir;
+  }
+};
+
+function drop() {
+  var x = current.x, y = current.y;
+  while (unoccupied(current, x, y, current.dir)) {
+    ++y;
+  }
+  if (y > 0) {
+    current.y = y - 1;
+    setBlock(x, y, current);
+    if (occupied(current, x, y, current.dir)) {
+      freeze();
+      clearLines();
+      if (isLose()) {
+        lose();
+      }
+      else {
+        setCurrentPiece(next);
+        setNextPiece();
+      }
+    }
+  }
+};
+
+function freeze() {
+  eachblock(current, current.x, current.y, current.dir, function(x, y) {
+    setBlock(x, y ,current);
+  });
+};
+
+function clearLines() {
+  var lines = 0;
+  for (var y = 0;y < ny; y++) {    if (isLineFull(y)) {
+      lines++;
+      for (var x = 0; x < nx; x++) {
+        setBlock(x, y, null);
+      }
+      for (var yy = y; yy > 0; yy--) {
+        for (var x = 0; x < nx; x++) {
+          setBlock(x, yy, getBlock(x, yy - 1));
+        }
+      }
+    }
+  }
+  if (lines > 0) {
+    score = score + (10 * lines * lines);
+    rows = rows + lines;
+    if (rows % 10 == 0) {
+      step = step - 0.02;
+    }
+  }
+};
+
+function isLineFull(y) {
+  for (var x = 0; x < nx; x++) {
+    if (getBlock(x, y) == null) {
+      return false;
+    }
+  }
+  return true;
+};
+
+function isLose() {
+  for (var x = 0; x < nx; x++) {
+    if (getBlock(x, 1) != null) {
+      return true;
+    }
+  }
+  return false;
+};
+
+function lose() {
+  playing = false;
+           // stats.update();
+  alert("Game Over! Your score: " + score);
+};
+
+function randomPiece() {
+  return pieces[Math.floor(Math.random() * pieces.length)];
+};
+
+function play() {
+           // stats.update();
+  playing = true;
+  actions = [];
+  dt = 0;
+  setCurrentPiece(next);
+  setNextPiece();
+  for (var x = 0; x < nx; x++) {
+    for (var y = 0; y < ny; y++) {
+      setBlock(x, y, null);
+    }
+  }
+};
+
+// Initialize the game
+play();
+    
+  </script>
+</body>
+</html>

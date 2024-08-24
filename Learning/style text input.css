@@ -1,0 +1,159 @@
+* , *::after ,*::before {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: auto 30px;
+  font-family: Arial , sans-serif;
+  font-size: 16px;
+}
+.custom-field {
+  position: relative;
+  padding-top: 20px;
+  margin-bottom: 5px;
+}
+
+.custom-field input {
+  padding: 12px;
+  background: #ddd;
+  border: none;
+  border-radius: 3px;
+  appearance: none;
+  outline: none;
+  width: 250px;
+}
+
+.custom-field .placeholder {
+  position: absolute;
+  left: 12px;
+  color: #aaa;
+  top: calc(50% + 10px);
+  transform: translateY(-50%);
+  transition: 0.3s ease;
+}
+.custom-field input:valid + .placeholder,
+.custom-field input:focus + .placeholder {
+  top: 12px;
+  font-size: 10px;
+  color: #222;
+}
+
+/* ONE */
+
+.custom-field.one input {
+  background: none;
+  border: 2px solid #ddd;
+  transition: 0.3s ease;
+}
+
+.custom-field.one input:valid,
+.custom-field.one input:focus {
+  border-color: #222;
+  transition-delay: 0.1s;
+}
+.custom-field.one .placeholder {
+  padding: 0 4px;
+  left: 8px;
+}
+
+.custom-field.one input:valid + .placeholder,
+.custom-field.one input:focus + .placeholder {
+  top:20px;
+  background-color: white;
+}
+
+/* TWO */
+
+.custom-field.two input {
+  border-radius: 0;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  background: 
+  linear-gradient(#222 , #222) center bottom /0 2px no-repeat,
+  linear-gradient(#ccc , #ccc) left bottom / 100% 2px no-repeat,
+  linear-gradient(#fff ,#fff) left bottom / 100%  no-repeat  ; 
+  
+  transition: 0.3s ease;
+}
+
+.custom-field.two input:valid ,
+.custom-field.two input:focus {
+  background-size: 100% 2px , 100% 2px , 100% ;
+}
+
+/* THREE */
+
+.custom-field.three .border {
+  width: 100%;
+  height: calc(100% - 20px);
+  position: absolute;
+  top: 20px ;
+  left: 0;
+}
+
+.custom-field.three .border::before {
+  content: "";
+  /* display: inline-block; */
+  width: 0;
+  height: 0; 
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-bottom: 0px solid #222;
+  border-right: 0px solid #222;
+  border-radius: 3px;
+  transition: 
+  border-width 0s ease 1.2s,
+  width 0.3s ease 0.9s,
+  height 0.3s ease 0.6s ;
+}
+
+.custom-field.three input:valid ~ .border::before,
+.custom-field.three input:focus ~ .border::before {
+  width: 100%;
+  height: 100%;
+  border-bottom: 2px solid #222;
+  border-right: 2px solid #222;
+  transition: 
+  width 0.3s ease,
+  height 0.3s ease 0.3s ;
+} 
+
+.custom-field.three .border::after {
+  content: "";
+  /* display: inline-block; */
+  width: 0;
+  height: 0; 
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-top: 0px solid #222;
+  border-left: 0px solid #222;
+  border-radius: 3px;
+  transition: 
+  border-width 0s ease 0.6s,
+  width 0.3s ease 0.3s ,
+  height 0.3s ease ;
+}
+
+.custom-field.three input:valid ~ .border::after,
+.custom-field.three input:focus ~ .border::after {
+  width: 100%;
+  height: 100%;
+  border-top: 2px solid #222;
+  border-left: 2px solid #222;
+  transition: 
+  border-width 0s ease 0.6s,
+  width 0.3s ease 0.6s,
+  height 0.3s ease 0.9s ;
+} 
+
+
+
+

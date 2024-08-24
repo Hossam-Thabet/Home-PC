@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documents</title>
+  <link rel="stylesheet" href="test.css">
+<style>
+  h2 {
+    margin: 0 auto;
+    width: max-content;
+  }
+  .flex-container {
+    display: flex;
+    width: 300px;
+    /* height: 300px; */
+    margin: 20px auto;
+    background-color: aqua;
+    /* align-items: flex-start; */
+    /* gap: 20px; */
+    flex-wrap: wrap; 
+    
+  }
+  .flex-container div ,
+  .grid-container div {
+    background-color: green;
+    color: white;
+    padding: 5px;
+    width: 25%;
+    /* margin: 0 auto;  */
+    /* width: max-content; */
+  }
+  .grid-container {
+    display: grid;
+    width: 300px;
+    height: 300px;
+    margin: 20px auto;
+    background-color: aqua;
+  }
+</style>
+</head>
+<body>
+  <h2>Flex layout</h2>
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
+<h2>Grid layout</h2>
+<div class="grid-container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
+<fieldset>
+  <legend>are you male or female</legend>
+  <label><input type="text" placeholder="whats your name ?"></label>
+</fieldset>
+
+
+</body>
+</html>

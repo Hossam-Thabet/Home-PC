@@ -1,0 +1,117 @@
+* , *::after , *::before {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: #bdbdbd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.emoji {
+  --emoji-size:200px;
+  margin: 1rem;
+  width: var(--emoji-size);
+  height: var(--emoji-size);
+}
+
+.head {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  background-color: #ffc83d;
+  overflow: hidden;
+  position: relative;
+  z-index: 5; 
+}
+
+.eyes {
+  position: absolute;
+  top: calc(var(--emoji-size) * .25);
+  left: calc(var(--emoji-size) * .5);
+}
+
+.eye {
+  position: absolute;
+  border-radius: 50%;
+  width: calc(var(--emoji-size) * 0.075);
+  height: calc(var(--emoji-size) * .15);
+  background-color: black;
+}
+
+.eye-left {
+  left: calc(var(--emoji-size) * -.2);
+}
+
+ .eye-right {
+  right: calc(var(--emoji-size) * -.2);
+}
+
+.mouth {
+  --mouth-h:calc(var(--emoji-size) * .3);
+  position: absolute;
+  bottom:calc(var(--emoji-size) * .15);
+  left: calc(var(--emoji-size) * .5);
+  transform: translateX(-50%);
+  background-color: black;
+}
+
+.smile {
+  width: calc(var(--emoji-size) * .6);
+  height:var(--mouth-h);
+  border-radius: 5% 5% var(--mouth-h) var(--mouth-h) ;
+}
+
+.surprice {
+  width: calc(var(--emoji-size) * .25 );
+  height:calc(var(--emoji-size) * .3);
+  border-radius: 50% ;
+}
+
+.face-mask {
+  width: calc(var(--emoji-size) * .6);
+  height: calc(var(--emoji-size) * .35) ;
+  border-radius: 10%;
+  background-color: white;
+  border: calc(var(--emoji-size) * .02) solid #999;
+  left: calc(var(--emoji-size) * .2) ;
+  transform: none; 
+} 
+ 
+.strap {
+  position: absolute;
+  background-color: white;
+  border: calc(var(--emoji-size) * .02) solid #999;
+  width: calc(var(--emoji-size) * .5);
+  height: calc(var(--emoji-size) * .1);
+  z-index:-1 ;
+}
+
+.strap-top-left {
+  transform: rotate(20deg);
+  top: calc(var(--emoji-size) * -0.05);
+  left: calc(var(--emoji-size) * -0.4); 
+}
+
+.strap-top-right {
+  transform: rotate(-20deg);
+  top: calc(var(--emoji-size) * -0.05);
+  right: calc(var(--emoji-size) * -0.4); 
+
+}
+
+.strap-bottom-left {
+  transform: rotate(30deg);
+  bottom: calc(var(--emoji-size) * -0.05);
+  left: calc(var(--emoji-size) * 0.4); 
+}
+
+.strap-bottom-right {
+  transform: rotate(-30deg);
+  bottom: calc(var(--emoji-size) * -0.05);
+  right: calc(var(--emoji-size) * 0.4); 
+}

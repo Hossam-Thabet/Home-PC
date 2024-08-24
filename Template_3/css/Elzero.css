@@ -1,0 +1,103 @@
+/* Start Global Rules  */
+:root {
+  --main-color: #2196f3;
+  --main-color-alt: #1787e0; 
+}
+* , *::after , *::before {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /* border:1px solid */
+}
+html {
+  scroll-behavior: smooth ;
+}
+body {
+  font-family: cairo, sans-serif ;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;  
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small Screen */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium Screen */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* large Screen */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Global Rules  */
+header {
+  
+background-color: white;
+box-shadow: 0 0 50px #ddd;
+} 
+header .container > a {
+  display: block;
+  color: var(--main-color);
+  text-decoration: none;
+  text-align: center; 
+  font-weight: bold;
+  
+  font-size: 1.5rem; 
+}
+/* header .container {
+
+} */
+header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  height: 70px;
+  
+  
+}
+ header ul li {
+  position: relative;
+  width:120px;
+  height: 50px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 0 10px; */
+  
+  
+  
+} 
+header ul li:hover {
+border : 4px solid var(--main-color);
+
+}
+header ul a {
+  text-decoration: none;
+  color: black;
+    /* width:80%; */
+  height: 80%;   
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  padding: 0 10px;
+  
+  
+  
+}

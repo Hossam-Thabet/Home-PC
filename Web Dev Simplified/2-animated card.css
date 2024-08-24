@@ -1,0 +1,91 @@
+* , *::after , *::before {
+  box-sizing: border-box;
+  font-family:'open sans' , arial;
+}
+
+.card-grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fit , minmax(300px,1fr));
+  gap:1rem; 
+   align-items: flex-start; 
+  
+}
+
+.card {
+  --padding: 1rem;
+  background:white;
+  overflow: hidden;
+  border: 1px solid #777;
+  border-radius: 0.25rem;
+}
+
+.card.card-shadow {
+  border:none;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.card-header {
+  font-size: 1.5rem;
+  margin-bottom: .5rem;
+  padding: var(--padding);
+  padding-bottom: 0;
+}
+
+.card-header.card-image {
+  overflow: hidden;
+  padding: 0; 
+}
+
+.card-header.card-image > img {
+  display: block; 
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  object-position: center;
+  max-height: 200px;
+  transition: transform 200ms ease-in-out;
+}
+
+.card:hover .card-header.card-image > img {
+  transform: scale(1.05);
+}
+
+.card-body {
+  font-size:0.9rem;
+  padding: 0 var(--padding);
+}
+
+.card-footer {
+  margin-top: 1rem;
+  padding: var(--padding);
+  padding-top: 0;
+}
+
+.btn {
+  --color:hsl(200,100%,50%);
+  background:var(--color) ;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  padding: .5em .75em;
+  cursor: pointer;
+  border-radius: .25em;
+}
+
+.btn:hover , .btn:focus {
+  background:hsl(200,100%,60%) ;
+}
+.btn.btn-outline {
+  background: none;
+  color: var(--color);
+  border:1px solid var(--color) ;
+}
+
+.btn.btn-outline:hover,
+.btn.btn-outline:focus {
+  background: hsl(200,100%,90%);
+}
+
+.btn + .btn {
+  margin-left: .25rem;
+}
