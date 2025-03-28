@@ -1,62 +1,514 @@
-/*let cardTitle = "Elzero", cardDescription ="Elzero Web Schoool" , cardDate = "25/10";
-let cardContent = `
-<div>
-<h3>Hello ${cardTitle}</h3>
-<p>${cardDescription}</p>
-<span>${cardDate}</span>
-</div>`
-document.write(cardContent.repeat(4)); */
+                  ////////////
+// Elzero Answers JS (Assignments & challenges)  //
+                  ////////////
 
-/*let NumberOne = 10;
-let Numbertwo = 20;
-console.log(NumberOne+""+Numbertwo);
-console.log(typeof(NumberOne+""+Numbertwo));*/
 
-/*console.log(elzero.innerHTML); // object
-console.log(typeof elzero); // object */
-/* `I'm In
-\\
-Love \\ """ '''
-++ With ++
-\"""\"""
-""JavaScript""`` */
- /*let a = 10;
- let b = "20";
- let c = 80;
-console.log(--c + +b + --a * +b++ - +b * a + --a - +true);
-console.log(79 + 20 + 9 * 20 - 21 * 9 + 8 - 1);
-console.log(Number.NaN);*/
+//-----------------------//
+// ASSIGNMENTS (1 - 9)   //  Reviewed
+//-----------------------//
 
-/*let a = 1_00;
+// Assignment (1 of 6)
+
+//Code One
+//Not working (The code comes first before defining the elements which will be applied to it)
+
+//Code two
+//Working (The code will be loaded after the window loads so the elements will be defined)
+
+//Code three
+// Working (The code comes after the elements defined) 
+
+//--------------------------------------------------------------------------------//
+
+// Assignment (2 of 6)
+
+// let myElement= document.write("<h1>Elzero</h1>");;
+// document.querySelector("h1").style.color = "blue";
+// document.querySelector("h1").style.fontSize = "80px";
+// document.querySelector("h1").style.fontWeight = "bold";
+// document.querySelector("h1").style.textAlign = "center";
+// document.querySelector("h1").style.fontFamily = "arial";
+
+//Alternate Solution
+// let elementH1 = document.createElement("h1");
+// let textH1 = document.createTextNode("Elzero");
+// document.body.appendChild(elementH1).appendChild(textH1);
+
+// document.querySelector("h1").style.color = "blue";
+// document.querySelector("h1").style.fontSize = "80px";
+// document.querySelector("h1").style.fontWeight = "bold";
+// document.querySelector("h1").style.textAlign = "center";
+// document.querySelector("h1").style.fontFamily = "arial";
+
+//--------------------------------------------------------------------------------//
+
+// Assignment (3 of 6)
+
+// console.log("%cElzero %cWeb %cSchool" , "font-size:40px;color: red;" 
+//   ,"font-size:40px;font-weight:bold;color:green;" 
+//   ,"font-size:40px;color:white;background-color:blue");
+
+//--------------------------------------------------------------------------------//
+
+// Assignment (4 of 6)
+
+// console.groupCollapsed("Group 1");
+// console.log("message One");
+// console.log("message Two");
+// console.groupCollapsed("Child Group");
+// console.log("message One");
+// console.log("message Two");
+// console.groupCollapsed("Grand Child Group");
+// console.log("message One");
+// console.log("message Two");
+// console.groupEnd();
+// console.groupEnd();
+// console.groupEnd();
+// console.groupCollapsed("Group 2");
+// console.log("message One");
+// console.log("message Two");
+
+//--------------------------------------------------------------------------------//
+
+// Assignment (5 of 6)
+
+// console.table(["Elzero", "Ahmed" , "Sameh" , "gamal" , "Aya"]);
+
+//--------------------------------------------------------------------------------//
+
+// Assignment (6 of 6)
+
+//Answer 1
+
+/*
+console.log("Iam In Console");
+document.write("Iam In Page");
+*/
+
+//Answer 2
+
+//console.log("Iam In Console");
+//document.write("Iam In Page");
+
+//################################################################################//
+
+
+/*
+===========================================
+1- Variables And Concatenation Challenge        Reviewed
+===========================================
+*/
+
+/*
+// The Challenge
+
+[1] Create 3 Variables [Title, Desctiption, Date]
+-- All In One Statement
+-- Variable Name Must Be Two Words
+-- Title Content Is "Elzero"
+-- Description Content Is "Elzero Web School"
+-- Date Content Is "25/10"
+[2] Create Variable Contains Div And This Div Contains
+-- H3 For Title
+-- P For Paragraph
+-- Span For Time
+[3] Add This Card To Page 4 Times
+[4] Use Template Literals For Concatenate
+
+Extra
+- Use ES6 Repeat
+*/
+
+// The Answer
+
+// let cardTitle = "Elzero", cardDescription ="Elzero Web Schoool" , cardDate = "25/10";
+// let cardContent = `
+// <div>
+// <h3>Hello ${cardTitle}</h3>
+// <p>${cardDescription}</p>
+// <span>${cardDate}</span>
+// </div>`
+// document.write(cardContent.repeat(4)); 
+
+//################################################################################//
+
+
+//-----------------------//
+// ASSIGNMENTS (10 - 17) //       Reviewed
+//-----------------------//
+
+// Assignment (1 of 4)
+
+// let numberOne = 10;
+// let numberTwo = 20;
+
+// console.log(numberOne+""+numberTwo);
+// console.log(typeof(numberOne+""+numberTwo));
+// console.log(`${numberOne}${numberTwo}`);
+// console.log(typeof `${numberOne}${numberTwo}`);
+// console.log(numberTwo +"\n" + numberOne);
+// console.log(`${numberTwo}
+// ${numberOne}`);
+
+//--------------------------------------------------------------------------------//
+
+// Assignment (2 of 4)
+
+// console.log(elzero.innerHTML); // object
+// console.log(typeof elzero); // object
+
+//Answer in HTML file
+
+//--------------------------------------------------------------------------------//
+
+// Assignment (3 of 4)
+
+// console.log("`I'm In\n\\\\\nLove \\\\ \"\" '''\n+++ With ++\n\\\"\"\"\\\"\"\"\n\"\"JavaScript\"\"``");
+
+//--------------------------------------------------------------------------------//
+
+// Assignment (4 of 4)
+
+// let a = 21;
+// let b = 20;
+
+// console.log("_"+(a +"_"+ b).repeat(4)+"_"); // _21_2021_2021_2021_20_
+
+//################################################################################//
+
+
+/* 
+========================
+2- Operators Challenge          Reviewed
+========================
+*/
+
+/*
+// Challenge 1
+
+// let a = 10;
+// let b = "20";
+// let c = 80;
+
+// console.log(++a + +b++ + +c++ - +a++);
+// console.log(++a + -b + +c++ - -a++ + +a);
+// console.log(--c + +b + --a * +b++ - +b * a + --a - +true);
+
+// [++a] [+]
+// [++a]
+// - Value:
+// - Explain:
+// [+]
+// - Explain:
+*/
+
+// The Answer
+
+// let a = 10;
+// let b = "20";
+// let c = 80;
+
+// console.log(++a + +b++ + +c++ - +a++); //100
+// console.log(11  +  20  +  80  - 11);  //100
+
+// console.log(++a + -b  + +c++ - -a++ + +a);  //94
+// console.log(11  + -20 + 80   - -11  + 12);  //94
+
+// console.log(--c + +b + --a * +b++ - +b * a + --a - +true); //97
+// console.log(79  + 20 +  9  *  20  - 21 * 9 +  8  - 1);     //97
+
+//--------------------------------------------------------------------------------//
+
+/*
+// Challenge 2
+
+// let d = "-100";
+// let e = "20";
+// let f = 30;
+// let g = true;
+
+// Only Use Variables Value
+// Do Not Use Variable Twice
+
+// console.log(); // 2000
+// console.log(); // 173
+*/
+
+// The Answer
+
+// let d = "-100";
+// let e = "20";
+// let f = 30;
+// let g = true;
+
+// console.log(-d * +e); // 2000
+// console.log(-(--d) + (++e * ++g) + f); // 173
+
+
+//################################################################################//
+
+
+//-----------------------//
+// ASSIGNMENTS (18 - 22) //     Reviewed
+//-----------------------//
+
+// Assignment (1 of 4)
+
+// Replace ? With Arithmetic Operators
+// console.log(10 * 20 + 15 % 3 + 190 + 10 - 400); // 0
+
+//--------------------------------------------------------------------------------//
+
+// Assignment (2 of 4)
+
+// let num = 3;
+
+// Solution One
+// console.log(num + num); // 6
+
+// Solution Two
+// console.log(num * --num ); // 6
+
+// Soultion Three
+// console.log(num + --num + --num  ); // 6
+
+// Soultion Four
+// console.log(num ** --num  - ++num); // 6
+
+// Solution Five
+// console.log(++num + true + true); // 6
+
+// Solution Six
+// console.log(num * (true + true)); // 6
+
+
+//--------------------------------------------------------------------------------//
+
+// Assignment (3 of 4)
+
+// let num = "10";
+
+// Solution One
+// console.log(+num + +num); // 20
+
+// Solution Two
+// console.log(+num + ++num - true); // 20
+
+// Solution Three
+// console.log(+num * (true + true)); // 20
+
+// Solution Four
+// console.log(-num * -(true + true)); // 20
+
+// Solution Five
+// console.log(++num + --num - true); // 20
+// console.log(+num + --num + --num - --num ); // 20
+
+
+//----------------------------------------------------------------------------------//
+
+// Assignment (4 of 4)
+
+// let points = 10;
+
+// console.log(points += true + true + true ); // 13
+
+// console.log(points -= true +true); // 8;
+
+//################################################################################//
+
+
+/* 
+=====================
+3- Number Challenge       Reviewed
+=====================
+*/
+
+/*
+// The Challenge
+
+let a = 100;
 let b = 2_00.5;
 let c = 1e2;
-let d = 2.4 ;
+let d = 2.4;
 
-console.log(parseInt(Math.min(a , b , c, d)));
-console.log(Math.pow(a , parseInt(d))); //10000
+// Find Smallest Number In All Variables And Return Integer
+console.log();
 
-console.log(Math.floor(d));
-console.log(Math.trunc(d));
-console.log(Math.round(d));
-console.log(parseInt(d));
+// Use Variables a + d One Time To Get The Needed Output
+console.log(); // 10000
 
-console.log((Math.trunc(b) / Math.ceil(d)).toFixed(2));  //66.67 string
-console.log(Math.round((Math.trunc(b) / Math.ceil(d)).toFixed(2)));  //67 number
-console.log(Math.random() *4); */
+// Get Integer "2" From d Variable With 4 Methods
+console.log();
+console.log();
+console.log();
+console.log();
 
-/*let theName = "hossam hussein";
+// Use Variables b + d To Get This Values
+console.log(); // 66.67 => String
+console.log(); // 67 => Number
+*/
 
-console.log(theName.length);
-console.log(theName);
-console.log(theName.split("")); */
+// The Answer
+
+// let a = 1_00;
+// let b = 2_00.5;
+// let c = 1e2;
+// let d = 2.4 ;
+
+// console.log(parseInt(Math.min(a , b , c, d)));
+// console.log(Math.pow(a , parseInt(d))); //10000
+
+// console.log(Math.floor(d));
+// console.log(Math.trunc(d));
+// console.log(Math.round(d));
+// console.log(parseInt(d));
+
+// console.log((Math.trunc(b) / Math.ceil(d)).toFixed(2));  //66.67 string
+// console.log(Math.round((Math.trunc(b) / Math.ceil(d)).toFixed(2)));  //67 number
+
+
+//################################################################################//
+
+
+/* 
+=====================
+4- String Challenge       Reviewed
+=====================
+*/
+
+/*
+// The Challenge
+
+All Solutions Must Be In One Chain
+You Can Use Concatenate
+
+// let a = "Elzero Web School";
+
+// Include This Method In Your Solution [slice, charAt]
+// console.log(); // Zero
+
+// 8H
+// console.log(); // HHHHHHHH
+
+// Return Array
+// console.log(); // ["Elzero"]
+
+// Use Only "substr" Method + Template Literals In Your Solution
+// console.log(); // Elzero School
+
+// Solution Must Be Dynamic Because String May Changes
+// console.log(); // eLZERO WEB SCHOOl
+*/
+
+// The Answer
+
+// let a = "Elzero Web School";
+ 
+
+// console.log(a.charAt(2).toUpperCase() + a.slice(3,6));                       //Zero
+// console.log(a.charAt(13).toUpperCase().repeat(8));                           //HHHHHHHH
+// console.log(a.slice(0,6).split());                                           // [Elzero]
+// console.log(`${a.substr(0,6)} ${a.substr(11,6)}`);                           //Elzero School
+// console.log(a.charAt(0).toLowerCase()+a.slice(1,a.length).toUpperCase() );   //eLZERO WEB SCHOOl 
+
+//################################################################################//
+
+
+//-----------------------//
+// ASSIGNMENTS (23 - 26) //      Reviewed
+//-----------------------//
+
+// Assignment (1 of 7)
+
+// // Examples
+// console.log(100_000); // 100000
+// console.log(100000); // 100000
+// console.log(5e4 + 5e4); // 100000
+
+// // Your Solutions
+// console.log(1e5);                        // 100000 //1
+// console.log(10**5);                      // 100000 //2
+// console.log(Math.pow(10,5));             // 100000 //3
+// console.log(Math.round(100_000.4));      // 100000 //4
+// console.log(Math.floor(100_000.6));      // 100000 //5
+// console.log(Math.trunc(100_000.8));      // 100000 //6
+// console.log(Math.ceil(99999.1));         // 100000 //7
+// console.log(+"100000");                  // 100000 //8
+// console.log(Number("100000"));           // 100000 //9
+// console.log(1e2 * 1e3);                  // 100000 //10
+// console.log(1e6 / 1e1);                  // 100000 //11
+// console.log(1e6 - 9e5);                  // 100000 //12
+// console.log(parseInt("100000"));         // 100000 //13
+// console.log(+(100000).toFixed(0));       // 100000 //14
+
+//----------------------------------------------------------------------------------//
+
+// Assignment (2 of 7)
+
+// console.log(-Number.MIN_SAFE_INTEGER);
+
+//----------------------------------------------------------------------------------//
+
+// Assignment (3 of 7)
+
+// console.log(Number.MAX_SAFE_INTEGER.toFixed().length);
+
+//----------------------------------------------------------------------------------//
+
+// Assignment (4 of 7)
+
+// let myVar = "100.56789 Views";
+
+// console.log(parseInt(myVar)); // 100
+// console.log(+(parseFloat(myVar).toFixed(2))); // 100.57
+
+//----------------------------------------------------------------------------------//
+
+// Assignment (5 of 7)
+
+// let num = 10;
+
+// console.log(Number.isInteger(num) + Number.isInteger(num) ); // 2
+
+//----------------------------------------------------------------------------------//
+
+// Assignment (6 of 7)
+
+// let flt = 10.4;
+
+// console.log(Math.trunc(flt));    // 10
+// console.log(Math.round(flt));    // 10
+// console.log(Math.floor(flt));    // 10
+// console.log(parseInt(flt));      // 10
+// console.log(+(flt).toFixed());   // 10
+
+//----------------------------------------------------------------------------------//
+
+// Assignment (7 of 7)
+
+// console.log(Math.floor(Math.random() * 5)); // 0 || 1 || 2 || 3 || 4
+
+//################################################################################//
+
+
+//-----------------------//
+// ASSIGNMENTS (27 - 30) //     Reviewed
+//-----------------------//
+
+// Assignment (1 of 2)
 
 // let userName = "Elzero";
-// console.log(userName[0].toLowerCase()); // e
-// console.log(userName.charAt(0).toLowerCase()); // e
-// console.log(userName.slice(0,1).toLowerCase()); // e
-// console.log(userName.substring(0,1).toLowerCase()); // e
-// console.log(userName.substr(0,1).toLowerCase()); // e
-// console.log(userName.split("")[0].toLowerCase().repeat(3)); // eee
+// console.log(userName[0].toLowerCase());                      // e
+// console.log(userName.charAt(0).toLowerCase());               // e
+// console.log(userName.slice(0,1).toLowerCase());              // e
+// console.log(userName.substring(0,1).toLowerCase());          // e
+// console.log(userName.substr(0,1).toLowerCase());             // e
+// console.log(userName.split("")[0].toLowerCase().repeat(3));  // eee
+
+//--------------------------------------------------------------------------------//
+
+// Assignment (2 of 2)
 
 // let word = "Elzero";
 // let letterZ = "z";
@@ -65,129 +517,129 @@ console.log(theName.split("")); */
 
 // console.log(word.includes(letterZ)); // True
 // console.log(word.startsWith(letterE.toUpperCase())); // True
-// console.log(word.endsWith(letterO.toLowerCase())); //
+// console.log(word.endsWith(letterO.toLowerCase())); // True
 
-// let st = "Elzero Web School";
-
-// if ((st.length * 2).toString() === "34" ) {
-//   console.log ("Good");}
-
-// if (st.split("")[st.indexOf("W")].toLowerCase() === "w") {
-//  console.log ("Good");}
-
-// if (typeof(s) !== "string"){
-//  console.log ("Good");}
-
-// if (typeof(st.length === "number")){
-//    console.log ("Good");}
-
-// if (st.slice(0,6).repeat(2)==="ElzeroElzero"){
-//    console.log ("Good");}
-
-/*let num1 = 500;
-console.log(num1);
-if (num1 <10) {
-console.log("00" + num1);
-}else if (10 < num1 && num1 < 100){
-  console.log("0" + num1);
-}else  {
-  console.log(num1); 
-} */
+//################################################################################//
 
 
-/* Edit What You Want Here
-
-let num1 = 11;
-let num2 = 3;
-let num3 = 11;
-let num4 = 40;
-
-/*
-  Do Not Edit Below This Line
-  Needed Output
-  True 7 Times
-
-
-// Condition 1
-
-if (num1 > num2) {
-  console.log("True");
-} else {
-  console.log("False");
-}
-
-// Condition 2
-
-if (num1 > num2 && num1 < num4) {
-  console.log("True");
-} else {
-  console.log("False");
-}
-
-// Condition 3
-
-if (num1 > num2 && num1 === num3) {
-  console.log("True");
-} else {
-  console.log("False");
-}
-
-// Condition 4
-
-if ((num1 + num2) < num4) {
-  console.log("True");
-} else {
-  console.log("False");
-}
-
-// Condition 5
-
-if ((num1 + num3) < num4) {
-  console.log("True");
-} else {
-  console.log("False");
-}
-
-// Condition 6
-
-if ((num1 + num2 + num3) < num4) {
-  console.log("True");
-} else {
-  console.log("False");
-}
-
-// Condition 7
-
-if (num4 - (num1 + num3) + num2 === 21) {
-  console.log("True");
-} else {
-  console.log("False");
-} */
-
-/*let num1 = 9;
-let str = "9";
-let str2 = "20";
-
-// Output
-if (num1 == str) {
-  console.log("{num1} Is The Same Value As {str}");
-}
-if(num1 == str) {
- console.log( "{num1} Is The Same Value As {str} But Not The Same Type" );
-}
-
-if (num1 !== str2) {
- console.log( "{num1} Is Not The Same Value Or The Same Type As {str2}");
-}
-if (typeof(str) === typeof(str2)){
- console.log("{str} Is The Same Type As {str2} But Not The Same Value"); 
-}*/
-
-/*
-  Switch Challenge
+/* 
+==========================
+5- If Condition Challenge       Reviewed
+==========================
 */
 
-// let job = "IT";
+/*
+// The Challenge 1
+
+let a = 10;
+
+if (a < 10) {
+  console.log(10);
+} else if (a >= 10 && a <= 40) {
+  console.log("10 To 40");
+} else if (a > 40) {
+  console.log("> 40");
+} else {
+  console.log("Unknown");
+}
+
+// Write Previous Condition With Ternary If Syntax
+*/
+
+// The Answer
+
+// let a = 10 ;
+
+// (a < 10) 
+// ? console.log(10) 
+// : a >= 10 && a <= 40 
+// ? console.log("10 To 40") 
+// : a > 40 
+// ? console.log(" > 40") 
+// : console.log("Unknown");
+
+//--------------------------------------------------------------------------------//
+
+/*
+// The Challenge 2
+
+let st = "Elzero Web School";
+
+if (“????” === “34”) {
+  console.log(“Good”);
+}
+
+// W Position May Change
+if ("????" === "w") {
+  console.log("Good");
+}
+
+if ("????" !== "string") {
+  console.log("Good");
+}
+
+if ("????" === "number") {
+  console.log("Good");
+}
+
+if ("????" === "ElzeroElzero") {
+  console.log("Good");
+}
+*/
+
+//The answer
+
+// let st = "Elzero Web School" ;
+
+// if ((st.length *2).toString() === "34") {
+//     console.log("Good");
+// }
+
+// if ((st.split("")[st.indexOf("W")]).toLowerCase() === "w") {
+//     console.log("Good");
+// }
+
+// if (typeof (st.length) !== "string") {
+//  console.log ("Good");
+// }
+
+// if (typeof (st.length) === "number") {
+//    console.log ("Good");
+// }
+
+// if (st.slice(0,6).repeat(2)==="ElzeroElzero") {
+//    console.log ("Good");
+// }
+
+//################################################################################//
+
+
+/* 
+======================================
+ 6- Switch And If Condition Challenge       Reviewed
+======================================
+*/
+
+/*
+//Switch Challenge
+
+let job = "Manager";
+let salary = 0;
+
+if (job === "Manager") {
+  salary = 8000;
+} else if (job === "IT" || job === "Support") {
+  salary = 6000;
+} else if (job === "Developer" || job === "Designer") {
+  salary = 7000;
+} else {
+  salary = 4000;
+}
+*/
+
+// The Answer
+
+// let job = "Manager";
 // let salary = 0;
 
 // switch (job) {
@@ -207,10 +659,44 @@ if (typeof(str) === typeof(str2)){
 // } 
 // console.log(salary);
 
-// /*
-//   If Challenge
+//--------------------------------------------------------------------------------//
 
-// */
+/*
+// If Challenge
+
+let holidays = 0;
+let money = 0;
+
+switch (holidays) {
+  case 0:
+    money = 5000;
+    console.log(`My Money is ${money}`);
+    break;
+  case 1:
+  case 2:
+    money = 3000;
+    console.log(`My Money is ${money}`);
+    break;
+  case 3:
+    money = 2000;
+    console.log(`My Money is ${money}`);
+    break;
+  case 4:
+    money = 1000;
+    console.log(`My Money is ${money}`);
+    break;
+  case 5:
+    money = 0;
+    console.log(`My Money is ${money}`);
+    break;
+  default:
+    money = 0;
+    console.log(`My Money is ${money}`);
+}
+*/
+
+// The Answer
+
 // let holidays = 6;
 // let money = 0;
 
@@ -234,11 +720,185 @@ if (typeof(str) === typeof(str2)){
 //     console.log(`My Money is ${money}`);
 // }  
 
-// let day = "   monday  ";
+//################################################################################//
+
+
+//-----------------------//
+// ASSIGNMENTS (31 - 32) //       Reviewed
+//-----------------------//
+
+// Assignment (1 of 3)
+
+// console.log(100 == "100");           // true
+// console.log(100 < 1000);             // true
+// console.log(110 > 100 && 10 < 20);   // true
+// console.log(-10 == "-10");           // true
+// console.log(+ -50 != +"-40");        // true
+// console.log(- 10 <  -"-40");         // true
+// console.log(+ "10" == + 10);         // true
+// console.log( - -20 > false);         // true 
+
+//--------------------------------------------------------------------------------//
+
+// Assignment (2 of 3)
+
+// let num1 = 10;
+// let num2 = 20;
+// console.log(num1 < num2);        // true
+// console.log(num1 <= num2);       // true
+// console.log(num1 != num2);       // true
+// console.log(num1 !== num2);      // true
+// console.log(num1 > - num2 );     // true
+// console.log(num1 >= - num2);     // true 
+
+//--------------------------------------------------------------------------------//
+
+// Assignment (3 of 3)
+
+// let a = 20;
+// let b = 30;
+// let c = 10;
+// console.log(a < b && a > c || a == b);                       // true
+// console.log(a < b || a >= c);                                // true
+// console.log(!(a > b) && !(a >= b) && !(a < c) && !(a <= c)); // true 
+
+//################################################################################//
+
+
+//-----------------------//
+// ASSIGNMENTS (33 - 37) //    Reviewed
+//-----------------------//
+
+// Assignment (1 of 4)
+
+// let num1 = 150;
+
+// if (num1 <10) {
+// console.log("00" + num1);
+// }else if (10 < num1 && num1 < 100){
+//   console.log("0" + num1);
+// }else  {
+//   console.log(num1); 
+// }
+
+//--------------------------------------------------------------------------------//
+
+// Assignment (2 of 4)
+
+// let num1 = 9;
+// let str = "9";
+// let str2 = "20";
+
+// if (num1 == str) {
+//   console.log("{num1} Is The Same Value As {str}");
+// }
+// if(num1 !== str) {
+//  console.log( "{num1} Is The Same Value As {str} But Not The Same Type" );
+// }
+
+// if (num1 != str2) {
+//  console.log( "{num1} Is Not The Same Value Or The Same Type As {str2}");
+// }
+// if (str != str2){
+//  console.log("{str} Is The Same Type As {str2} But Not The Same Value"); 
+// }
+
+//--------------------------------------------------------------------------------//
+
+// Assignment (3 of 4)
+
+// let num1 = 10;
+// let num2 = 30;
+// let num3 = "30";
+
+//  if ( ((num3 > num1) && (num3 !== num2)) 
+//    && ((num3 > num1) && (num3 !== num2)) 
+//    && ((num3 != num1)&& (num3 !== num2))) {
+//   console.log(`"30 Is Larger Than 10 And Type string Not The Same Type As number"
+//     "30 Is Larger Than 10 And Value Is The Same As 30 And Type string Not The Same Type As number"
+//     "{num3} Value And Type Is Not The Same As {num1} And Type Is Not The Same As {num2}"`);
+//  }
+
+//--------------------------------------------------------------------------------//
+
+// Assignment (4 of 4)
+
+// let num1 = 11;
+// let num2 = 10;
+// let num3 = 11;
+// let num4 = 33;
+
+// // Condition 1
+
+// if (num1 > num2) {
+//   console.log("True");
+// } else {
+//   console.log("False");
+// }
+
+// // Condition 2
+
+// if (num1 > num2 && num1 < num4) {
+//   console.log("True");
+// } else {
+//   console.log("False");
+// }
+
+// // Condition 3
+
+// if (num1 > num2 && num1 === num3) {
+//   console.log("True");
+// } else {
+//   console.log("False");
+// }
+
+// // Condition 4
+
+// if ((num1 + num2) < num4) {
+//   console.log("True");
+// } else {
+//   console.log("False");
+// }
+
+// // Condition 5
+
+// if ((num1 + num3) < num4) {
+//   console.log("True");
+// } else {
+//   console.log("False");
+// }
+
+// // Condition 6
+
+// if ((num1 + num2 + num3) < num4) {
+//   console.log("True");
+// } else {
+//   console.log("False");
+// }
+
+// // Condition 7
+
+// if (num4 - (num1 + num3) + num2 === 21) {
+//   console.log("True");
+// } else {
+//   console.log("False");
+// } 
+
+//################################################################################//
+
+
+//-----------------------//
+// ASSIGNMENTS (38 - 39) //    Reviewed
+//-----------------------//
+
+// Assignment (1 of 1)
+
+// let day = "   fggy  ";
 // let dayMod = `${day.trim().slice(0,1).toUpperCase()}${day.trim().slice(1)}` ;
 // // You Need To Remove Spaces And Make First Letter Capital => Friday
+
 // console.log(dayMod);
-//  switch (dayMod) {
+// switch (dayMod) {
 // case "Friday":
 // case "Saturday":
 // case "Sunday":
@@ -247,26 +907,215 @@ if (typeof(str) === typeof(str2)){
  
 // case "Monday":
 // case "Thursday":
-//   console.log(`Its ${dayMod}, "From 10:00 AM To 5:00 PM"`);
+// console.log(`Its ${dayMod}, "From 10:00 AM To 5:00 PM"`);
+// break;
 
-// let day = "Tuesday";
-// // Output => "From 10:00 AM To 6:00 PM"
+// case "Tuesday":
+// console.log(`Its ${dayMod}, "From 10:00 AM To 6:00 PM"`);
+// break;
 
-// let day = "Wednesday";
-// // Output => "From 10:00 AM To 7:00 PM"
+// case "Wednesday":
+// console.log(`Its ${dayMod}, "From 10:00 AM To 7:00 PM"`);
+// break;
 
-// let day = "World";
-// // Output => "Its Not A Valid Day"
-//  }
+// default:
+// console.log(`Its ${dayMod},"Its Not A Valid Day"`);
+// break;
+// }
 
-/*
-  Loop Challenge
+//################################################################################//
+
+
+/* 
+====================
+ 7- Array Challenge      Reviewed   
+====================
 */
 
+/*
+// The Challenge
+
+let zero = 0;
+
+let counter = 3;
+
+let my = ["Ahmed", "Mazero", "Elham", "Osama", "Gamal", "Ameer"];
+
+// Write Code Here
+
+console.log(my); // ["Osama", "Elham", "Mazero", "Ahmed"];
+
+console.log(my.slice("????")); // ["Elham", "Mazero"]
+
+console.log(); // "Elzero"
+
+console.log(); // "rO"
+*/
+
+//The Answer
+
+// let zero = 0;
+
+// let counter = 3;
+
+// let my = ["Ahmed", "Mazero", "Elham", "Osama", "Gamal", "Ameer"];
+
+// console.log(my.reverse().slice(--counter)); // ["Osama", "Elham", "Mazero", "Ahmed"];
+// //                                 2
+// console.log(my.slice(++counter,--zero)); // ["Elham", "Mazero"]
+// //                      3         -1
+// console.log(my[counter].slice(++zero,--counter) + my[my.length - counter].slice(counter)); // "Elzero"
+
+// console.log(my.reverse()[++zero].slice(my.length-counter,my.length- --counter) + my[counter][my.length-counter].toUpperCase()); // "rO"
+ 
+//################################################################################//
+
+
+//-----------------------//
+// ASSIGNMENTS (40 - 47) //     Reviewed
+//-----------------------//
+
+// Assignment (1 of 6)
+
+// let myFriends = ["Ahmed", "Elham", "Osama", "Gamal"];
+// let num = 3;
+
+// Method 1
+// myFriends.pop();  // Gamal
+// console.log(myFriends); // ["Ahmed", "Elham", "Osama"];
+
+// Method 2
+// console.log(myFriends.slice(myFriends.length - ++num,--num)); // ["Ahmed", "Elham", "Osama"];
+
+// Method 3 (additional)
+// myFriends.length = num;
+// console.log(myFriends); // ["Ahmed", "Elham", "Osama"];
+
+//--------------------------------------------------------------------------------//
+
+// Assignment (2 of 6)
+
+// let friends = ["Ahmed", "Eman", "Osama", "Gamal"];
+
+// friends.pop();
+// friends.shift();
+// console.log(friends); // ["Eman", "Osama"]
+
+//--------------------------------------------------------------------------------//
+
+// Assignment (3 of 6)
+
+// let arrOne = ["C", "D", "X"];
+// let arrTwo = ["A", "B", "Z"];
+// let finalArr = [];
+
+// finalArr = arrOne.concat(arrTwo).sort().reverse();
+// console.log(finalArr); // ["Z", "X", "D", "C", "B", "A"]
+
+//Alternate solution
+
+// finalArr = [arrTwo.pop(),arrOne.pop(),arrOne.reverse(),arrTwo.reverse()].flat();
+// console.log(finalArr); // ["Z", "X", "D", "C", "B", "A"]
+
+//Alternate 2 Solution
+
+// finalArr = [arrTwo.pop(),arrOne.pop(),arrOne.pop(),arrOne.pop(),arrTwo.pop(),arrTwo.pop()];
+// console.log(finalArr); // ["Z", "X", "D", "C", "B", "A"]
+
+
+//--------------------------------------------------------------------------------//
+
+// Assignment (4 of 6)
+
+// let website = "Go";
+// let words = [`${website}ogle`, "Facebook", ["Elzero", "Web", "School"]];
+
+// console.log(words[website.length][0].slice(website.length).toUpperCase()); // ZERO
+
+//--------------------------------------------------------------------------------//
+
+// Assignment (5 of 6)
+
+// let needle = "JS";
+// let haystack = ["PHP", "JS", "Python"];
+
+// // Write 3 Solutions
+
+// Solution 1
+// if (haystack.includes(needle)== true){
+//   console.log("Found");
+// }
+
+// Solution 2
+// haystack.pop()
+// if (haystack.lastIndexOf(needle)==1){
+//   console.log("Found");
+// }
+
+// Solution 3
+// if (haystack.indexOf(needle) == 1) {
+//   console.log("Found");
+// }
+
+//Alternate Solution 1
+// let i = 0;
+// while (i<haystack.length) {
+//   switch (haystack[i]){
+//   case "JS": 
+//   console.log("Found");
+//   }
+//   i++
+// }
+
+//Alternate Solution 2
+// for (let i = 0 ; i<haystack.length ; i++) {
+//   if (haystack[i] === "JS") {
+//     console.log("Found");
+//   }
+// }
+
+//--------------------------------------------------------------------------------//
+
+// Assignment (6 of 6)
+
+// let arr1 = ["A", "C", "X"];
+// let arr2 = ["D", "E", "F", "Y"];
+// let allArrs = [];
+
+// allArrs = arr1.concat(arr2).sort().slice(arr2.length).join("").toLowerCase();
+// console.log(allArrs); // fxy
+
+//Alternate Solution
+
+// let ind = arr2.length - arr1.length
+// allArrs = [arr2[++ind],arr1.pop(), arr2.pop() ];
+// allArrs = allArrs.join("").toLowerCase();
+// console.log(allArrs); // fxy
+
+//################################################################################//
+
+
+/* 
+====================
+ 8- Loop Challenge      Reviewed    
+====================
+*/
+
+/*
+//The Challenge 
+
+let myAdmins = ["Ahmed", "Osama", "Sayed", "Stop", "Samera"];
+let myEmployees = ["Amgad", "Samah", "Ameer", "Omar", "Othman", "Amany", "Samia", "Anwar"];
+
+document.write(`<div>We Have X Admins</div>`);
+*/
+
+// The Answer
+
 // let myAdmins = ["Ahmed", "Osama", "Sayed", "Stop", "Samera"];
-// let myEmployees = ["Gmgad", "Samah", "Ameer", "Omar", "Othman", "Amany","Odesa" ,"Samia", "Anwar" , "Samar", ];
-// Admins = myAdmins.length;
-// members = myEmployees.length;
+// let myEmployees = ["Gmgad", "Samah", "Ameer", "Omar", "Othman", "Amany","Odesa" ,"Samia", "Anwar" , "Samar"];
+// let Admins = myAdmins.length;
+// let members = myEmployees.length;
 // document.write(`<div>We Have ${Admins} Admins</div>`);
 // document.write(`<div>We Have ${members} Emplyees</div>`);
 // for (let i = 0; i< myAdmins.length; i++){
@@ -282,7 +1131,15 @@ if (typeof(str) === typeof(str2)){
 //   } 
 // }
 
-//    1 
+//################################################################################//
+
+
+//-----------------------//
+// ASSIGNMENTS (48 - 53) //    Reviewed
+//-----------------------//
+
+// Assignment (1 of 7)
+
 // let start = 10;
 // let end = 100;
 // let exclude = 40;
@@ -292,22 +1149,30 @@ if (typeof(str) === typeof(str2)){
 //   console.log(i);
 // }
 
-//    2
+//--------------------------------------------------------------------------------//
+
+// Assignment (2 of 7)
+
 // let start = 10;
 // let end = 0;
 // let stop = 3;
+
 // for (let i = start; i >= stop ; i--) {
-//   if (i <start){
+//   if (i < start) {
 //     console.log(`${end}${i}`)
 //   } else {
 //     console.log(i);
 //   }
 // }
 
-//    3
+//--------------------------------------------------------------------------------//
+
+// Assignment (3 of 7)
+
 // let start = 1;
 // let end = 6;
 // let breaker = 2;
+
 // for (let i = start; i <= 6; i++){
 //   console.log(i);
 //   for (let j = breaker;j <end ; j+=breaker){
@@ -315,21 +1180,37 @@ if (typeof(str) === typeof(str2)){
 //   }
 // }
 
-//    4
-//  
+//--------------------------------------------------------------------------------//
 
-//    5
-// let friends = ["Ahmed", "Sayed", "Eman", "Mahmoud", "Ameer", "Osama", "Sameh"];
-// let letter = "a";
-// let count = letter.length;
-// for (let i = letter.length - letter.length ; i <friends.length ; i++) {
-//    if (friends[i][letter.length - letter.length] === letter.toUpperCase()) continue ;
-//   console.log(`${count++} =>${friends[i]}`);
+// Assignment (4 of 7)
+
+// let index = 10;
+// let jump = 2;
+
+// for (let i = index; i > jump; i -= jump) {
+//   console.log(i);
 // }
 
-//    6
+//--------------------------------------------------------------------------------//
+
+// Assignment (5 of 7)
+
+// let friends = ["Ahmed", "Sayed", "Eman", "Mahmoud", "Ameer", "Osama", "Sameh"];
+// let letter = "a";
+
+// let count = letter.length;
+// for (let i = count - count ; i <friends.length ; i++) {
+//    if (friends[i][letter.length - letter.length] === letter.toUpperCase()) continue ;
+//   console.log(`${count++} => ${friends[i]}`);
+// }
+
+//--------------------------------------------------------------------------------//
+
+// Assignment (6 of 7)
+
 // let start = 0;
 // let swappedName = "elZerO";
+
 // let swappedName1 = [];
 // for (let i = start; i < swappedName.length; i++){
 //   if ( swappedName[i]===swappedName[i].toUpperCase()){
@@ -341,7 +1222,10 @@ if (typeof(str) === typeof(str2)){
 // }
 // console.log(swappedName1.join(""));
 
-//    7
+//--------------------------------------------------------------------------------//
+
+// Assignment (7 of 7)
+
 // let start = 0;
 // console.log(start.length);
 // let mix = [1, 2, 3, "A", "B", "C", 4];
@@ -352,10 +1236,19 @@ if (typeof(str) === typeof(str2)){
 //   }
 // }
 
-//    8  
+//################################################################################//
+
+
+//-----------------------//
+// ASSIGNMENTS (54 - 56) //   Reviewed
+//-----------------------//
+
+// Assignment (1 of 1)
+
 // let friends = ["Ahmed", "Sayed", "Ali", 1, 2, "Mahmoud", "Amany"];
 // let index = 0;
 // let counter = 0;
+
 // while (index < friends.length){
 //  if (friends[index][friends.length - friends.length] !== "A"){
 //   if (typeof friends[index] !== "number"){
@@ -365,7 +1258,17 @@ if (typeof(str) === typeof(str2)){
 // index++ ; 
 // }
 
+//################################################################################//
+
+/* 
+=======================================
+ 9- Random Argument Function Challenge         
+=======================================
+*/
+
 /*
+//the Challenge
+
   Function - Random Argument Challenge
   ====================================
   Create Function showDetails
@@ -377,7 +1280,14 @@ if (typeof(str) === typeof(str2)){
   Argument Is Random
   Data Is Not Sorted Output Depend On Data Types
   - Use Ternary Conditional Operator
+
+showDetails("Osama", 38, true); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+showDetails(38, "Osama", true); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+showDetails(true, 38, "Osama"); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+showDetails(false, "Osama", 38); // "Hello Osama, Your Age Is 38, You Are Not Available For Hire"
 */
+
+//The Answer
 
 // function showDetails(...arg){
 //   document.write(`<div>`);
@@ -399,6 +1309,26 @@ if (typeof(str) === typeof(str2)){
 //  showDetails(true, 38, "Oosama"); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
 //  showDetails(false, "Osama", 38); // "Hello Osama, Your Age Is 38, You Are Not Available For Hire"
 
+//################################################################################//
+
+
+//-----------------------//
+// ASSIGNMENTS (57 - 63) //       ??????? Not Sure
+//-----------------------//
+
+// Assignment (1 of 6)
+
+// Assignment (2 of 6)
+
+// Assignment (3 of 6)
+
+// Assignment (4 of 6)
+
+// Assignment (5 of 6)
+
+// Assignment (6 of 6)
+
+//57 - 63
 // function sayHello(theName,theGender = "") {
 // document.write(`<div>`);
 //   if (theGender == "Male") {
@@ -442,10 +1372,82 @@ if (typeof(str) === typeof(str2)){
 // multiply(100.5, 10,12.5,2.055,15, "B"); // 1000
 
 
+// function calculate(firstNum, secondNum, operation = firstNum + secondNum) {
+ 
+//   if (operation === "add") {
+//   console.log(firstNum + secondNum);
+// }else if (operation === "subtract"){
+//   console.log(firstNum - secondNum);
+// }else if (operation === "multiply"){
+//   console.log(firstNum * secondNum);
+// }else if (secondNum === undefined) {
+//   console.log (`Seconed Number Not Found`);
+//  }else {console.log(operation);}
+// }
+// // Needed Output
+// calculate(20); // Second Number Not Found
+// calculate(20, 30); // 50
+// calculate(20, 30, 'add'); // 50
+// calculate(20, 30, 'subtract'); // -10
+// calculate(20, 30, 'multiply'); // 600
+
+// function ageInTime(theAge) {
+//   // Your Code Here
+//   let AgeByMonths = theAge * 12 ;
+//   let AgeByWeeks = theAge * 12 * 4;
+//   let AgeByDays = theAge * 365 ;
+
+//   console.log(`Your Age By Years is ${theAge}`);
+//   if (theAge > 100 || theAge <10){
+//     console.log(`Age out Of Range`)
+//   }else {
+//     console.log(`Your Age By Months Is ${AgeByMonths}`);
+//     console.log(`Your Age By Weeks Is ${AgeByWeeks}`);
+//     console.log(`Your Age By Days Is ${AgeByDays} `);
+//   } 
+// }
+// // Needed Output
+// ageInTime(110); // Age Out Of Range
+// ageInTime(38); // Months Example => 456 Months
+
+//################################################################################//
+
+
+/* 
+==============================
+ 10- Arrow Function Challenge        
+==============================
+*/
 
 /*
-  Function Arrow Challenges
+//The Challenge 
+
+// [1] One Statement In Function
+// [2] Convert To Arrow Function
+// [3] Print The Output [Arguments May Change]
+
+let names = function () {
+  // Parameter ?
+  return "???";
+};
+
+console.log(names("Osama", "Mohamed", "Ali", "Ibrahim"));
+// String [Osama], [Mohamed], [Ali], [Ibrahim] => Done !
+
+=================================
+
+// [1] Replace ??? In Return Statement To Get The Output
+// [2] Create The Same Function With Regular Syntax
+// [3] Use Array Inside The Arguments To Get The Output
+
+let myNumbers = [20, 50, 10, 60];
+
+let calc = (one, two, ...nums) => "???";
+
+console.log(calc(10, "???", "???")); // 80
 */
+
+//The Answer
 
 // [1] One Statement In Function
 // [2] Convert To Arrow Function
@@ -462,7 +1464,7 @@ if (typeof(str) === typeof(str2)){
 // console.log(names("Osama", "Mohamed", "Ali", "Ibrahim"));
 // String [Osama], [Mohamed], [Ali], [Ibrahim] => Done !
 
-/* ================================= */
+//--------------------------------------------------------------------------------//
 
 // [1] Replace ??? In Return Statement To Get The Output
 // [2] Create The Same Function With Regular Syntax
@@ -481,6 +1483,51 @@ if (typeof(str) === typeof(str2)){
 // } ;
 
 // console.log(calc(10, myNumbers[+false], ...myNumbers)); // 80
+
+//################################################################################//
+
+
+/*
+   Arrow Function Challenges    (Alternate)
+*/
+
+// [1] One Statement In Function
+// [2] Convert To Arrow Function
+// [3] Print The Output [Arguments May Change]
+
+// let names = function (...arg) {
+  
+//      return `String [${arg.join("], [")}] => Done !` ;
+//   }
+
+//   let names = (...arg) => `String [${arg.join("], [")}] => Done !` ;
+ 
+  
+// console.log(names("Osama", "Mohamed", "Ali", "Ibrahim"));
+// // String [Osama], [Mohamed], [Ali], [Ibrahim] => Done !
+
+// /* ================================= */
+
+// // [1] Replace ??? In Return Statement To Get The Output
+// // [2] Create The Same Function With Regular Syntax
+// // [3] Use Array Inside The Arguments To Get The Output
+
+
+
+// let myNumbers = [20, 50, 10, 60];
+
+// let calc = (one, two, ...nums) => one + two + nums[1];
+
+// console.log(calc(10, myNumbers[0], myNumbers)); // 80  
+
+//###############################################################################//
+
+
+//-----------------------//
+// ASSIGNMENTS (64 - 70) // 
+//-----------------------//
+
+// Assignment (1 of 4)
 
 // function getDetails(zName, zAge, zCountry) {
 //   function namePattern() {
@@ -516,6 +1563,9 @@ if (typeof(str) === typeof(str2)){
 // console.log(getDetails("Ahmed ali", "32 Is The Age", "Syria"));
 // // Hello Ahmed A., Your Age Is 32, You Live In SY
 
+//--------------------------------------------------------------------------------//
+
+// Assignment (2 of 4)
 
 // a = "Osama Mohamed"
 // b = a.split(" ");
@@ -532,6 +1582,10 @@ if (typeof(str) === typeof(str2)){
 
 // console.log(urlCreate("https", "elzero", "org")); // https://www.elzero.org
 
+//--------------------------------------------------------------------------------//
+
+// Assignment (3 of 4)
+
 // let checker =(zName) =>(status) => (salary) => status === "Available" ? `${zName}, My Salary Is ${salary}` : `Iam Not Avaialble`;
     
 // console.log(checker("Osama")("Available")(4000)); // Osama, My Salary Is 4000
@@ -547,6 +1601,10 @@ if (typeof(str) === typeof(str2)){
 
 // console.log(checker("Osama")("Available")(4000)); // Osama, My Salary Is 4000
 // console.log(checker("Ahmed")("Not Available")()); // Iam Not Avaialble
+
+//--------------------------------------------------------------------------------//
+
+// Assignment (4 of 4)
 
 // function specialMix(...data) {
 //   // Your Code Here
@@ -572,8 +1630,16 @@ if (typeof(str) === typeof(str2)){
 // console.log(specialMix("Testing", "10Testing", "40Cool" )); // 50
 // console.log(specialMix("Test", "Cool", "Test")); // All Is Strings
 
+//################################################################################//
+
+/* 
+=======================================
+ 11- Higher Order Functions Challenges        
+=======================================
+*/
+
 /*
-  Higher Order Functions Challenges
+//The Challenge
 
   You Can Use
   - ,
@@ -589,7 +1655,14 @@ if (typeof(str) === typeof(str2)){
   - Order Is Not Important
   - All In One Chain
 
+let myString = "1,2,3,EE,l,z,e,r,o,_,W,e,b,_,S,c,h,o,o,l,2,0,Z";
+
+let solution = '?????';
+
+console.log(solution); // Elzero Web School
 */
+
+//The Answer
 
 // let myString = "1,2,3,EE,l,z,e,r,o,_,W,e,b,_,S,c,h,o,o,l,2,0,Z";
 // c = isNaN(myString);
@@ -612,8 +1685,13 @@ if (typeof(str) === typeof(str2)){
 
 // console.log(solution); // Elzero Web School
 
+//################################################################################//
 
-//    1   (71-78)
+//-----------------------//
+// ASSIGNMENTS (71 - 78) // 
+//-----------------------//
+
+//   1 of 5   
 // let mix = [1, 2, 3, "E", 4, "l", "z", "e", "r", 5, "o"];
 // let solution1 = mix.map((ele) => typeof ele === "number" ? ele="":ele)
 // .reduce((acc,cur) => acc+cur);
@@ -622,7 +1700,7 @@ if (typeof(str) === typeof(str2)){
 
 // console.log(solution1);
 
-//    2  
+//    2 of 5 
 // let myString = "EElllzzzzzzzeroo";
 // let solution2 = myString.split("")
 // .filter((ele ,i) => myString.indexOf(ele) === i )
@@ -630,7 +1708,7 @@ if (typeof(str) === typeof(str2)){
 
 // // Elzero
 
-//    3
+//    3 of 5
 
 // let myArray = ["E", "l", "z", ["e", "r"], "o"];
 
@@ -642,7 +1720,7 @@ if (typeof(str) === typeof(str2)){
 // }, []);
 // console.log(solution3);
 
-//    4
+//    4 of 5
 
 // let numsAndStrings = [1, 10, -10, -20, 5, "A", 3, "B", "C"];
 // let solution4 = numsAndStrings.filter((ele)=> typeof ele !== "string")
@@ -652,7 +1730,7 @@ if (typeof(str) === typeof(str2)){
 
 // console.log(solution4);
 
-//    5
+//    5 of 5
 
 // let nums = [2, 12, 11, 5, 10, 1, 99];
 // let solution5 = nums.reduce(function (acc , cur) {
@@ -668,8 +1746,63 @@ if (typeof(str) === typeof(str2)){
 // // 500
 // console.log(solution5);
 
+//##############################################################################//
 
-//    3
+
+//-----------------------//
+// ASSIGNMENTS (79 - 85) // 
+//-----------------------//
+
+
+//    1 of 4
+
+// let member = {
+//   name : "Elzero",
+//   country: "Egypt",
+//   age:38,
+//   fullDetails: function (){
+//     return `My Name Is ${name},My Age Is ${this.age}, I Live in ${this.country}`
+//   }
+// };
+
+// console.log(member.name); // Elzero
+// console.log(member.age); // 38
+// console.log(member.country); // Egypt
+// console.log(member.fullDetails());
+// My Name Is Elzero, My Age Is 38, I Live in Egypt
+
+
+//    2 of 4
+// Method One
+// Create Your Object Here
+
+// let objMethodOne = {property:1};
+
+// console.log(objMethodOne.property); // "Method One"
+
+// Method Two
+// Create Your Object Here
+
+// let objMethodTwo = new Object({property :2});
+
+// console.log(objMethodTwo.property); // "Method Two"
+
+// Method Three
+// Create Your Object Here
+
+// let objMethodThree = Object.create({property:3});
+
+// console.log(objMethodThree.property); // "Method Three"
+
+// Method Four
+// Create Your Object Here
+
+// let objMethodFour = Object.assign({property:4});
+
+// console.log(objMethodFour.property); // "Method Four"
+
+
+//    3 of 4
 
 // let a = 1;
 // let threeNums = {
@@ -686,7 +1819,7 @@ if (typeof(str) === typeof(str2)){
 // console.log(finalObject);
 
 
-//    4
+//    4 of 4
 
 // The Object To Work With
 // let myFavGames = {
@@ -743,8 +1876,14 @@ if (typeof(str) === typeof(str2)){
 //   console.log("#".repeat(20));
 // }
 
+//##############################################################################//
 
-//  1   (86-93)
+
+//-----------------------//
+// ASSIGNMENTS (86 - 93) // 
+//-----------------------//
+
+//  1 of 6 
 //html <div id="elzero" class="element" name="js">JavaScript</div>
 
 // console.log(document.querySelector("div"));
@@ -765,7 +1904,7 @@ if (typeof(str) === typeof(str2)){
 // console.log(document.body.firstChild);
 // console.log(document.body.firstElementChild);
 
-//  2
+//  2 of 6
 
 // for(let i=0;i<document.images.length;i++){
 //   document.getElementsByTagName("img")[i].setAttribute("src","https://elzero.org/wp-content/themes/elzero/imgs/logo.png");
@@ -774,7 +1913,7 @@ if (typeof(str) === typeof(str2)){
 //   console.log(document.images[i].alt);
 // };
 
-//  3
+//  3 of 6
 
 // let input1 = document.forms[0][0];
 // let output1= document.getElementsByClassName("result")[0];
@@ -784,7 +1923,7 @@ if (typeof(str) === typeof(str2)){
 // }
 
 
-//  4
+//  4 of 6
 
 // let divOne = document.querySelector(".one");
 // let divTwo = document.querySelector(".two");
@@ -796,7 +1935,7 @@ if (typeof(str) === typeof(str2)){
 // divOne.innerHTML = divTwo.innerHTML;
 // divTwo.innerHTML = `${divOneContent} ${divTwo.attributes.length}`;
 
-//  5
+//  5 of 6
 // let img1 = document.querySelectorAll("img");
 // for (let i=0;i<img1.length;i++){
 //    if (img1[i].hasAttribute("alt")){
@@ -807,20 +1946,20 @@ if (typeof(str) === typeof(str2)){
 // };
 
 
-//  6
+//  6 of 6
 
 // let input = document.querySelectorAll(".input");
 // submit = document.querySelector("[type= 'submit']");
 // box = document.querySelectorAll(".box");
 
 // for(let i = 0; i < input.length; i++){
-//     input[i].style.display = "block";
-//     input[i].style.boxSizing = "border-box";
-//     input[i].style.width = "250px";
-//     input[i].style.padding = "10px";
-//     input[i].style.margin = "15px auto";
-//     input[i].style.borderRadius = ".5rem";
-//     input[i].style.border = "1px solid black";
+//   input[i].style.display = "block";
+//   input[i].style.boxSizing = "border-box";
+//   input[i].style.width = "250px";
+//   input[i].style.padding = "10px";
+//   input[i].style.margin = "15px auto";
+//   input[i].style.borderRadius = ".5rem";
+//   input[i].style.border = "1px solid black";
 // }
 
 // submit.style.backgroundColor = "gray";
@@ -864,10 +2003,34 @@ if (typeof(str) === typeof(str2)){
 //     }
 // };
 
+//#################################################################################//
 
+// Challenge in video 90 (create 100 cards using looping)
+// for (i=1;i<100;i++){
+//   let myElement = document.createElement("div");
+//   let myPara = document.createElement("p");
+//   let myH2 = document.createElement("h2");
+//   let myText1 = document.createTextNode(`Product Title ${i}`);
+//   let myText2 = document.createTextNode("Product Description");
+  
+//   document.body.appendChild(myElement);
+//   myElement.className = `product ${i}`;
+//   myElement.appendChild(myH2);
+//   myElement.appendChild(myPara);
+//   myH2.appendChild(myText1);
+//   myPara.appendChild(myText2);
+// };
 
 
+// Undefined Answer 2
+// let arr1 = [[1,2],[3,4],[5,6]];
 
+// for (i=0; i<arr1.length;i++){
+//   for (let j=0;j<arr1[i].length;j++){
+//     console.log(arr1[i][j]);
+//   }
+//   console.log(arr1[i]);
+// }
 
 
 
@@ -882,1218 +2045,95 @@ if (typeof(str) === typeof(str2)){
 
 
 
+/*
+   12- DOM Challenge   ?????  Not solved
 
+   The Challenge is a figure (No Code)
+*/
 
+//#################################################################################//
 
+//----------------------- //
+// ASSIGNMENTS (94 - 101) //    ????? Not solved yet 
+//----------------------- //
 
+// 1 of 5    
 
+//#################################################################################//
 
+/*
+   13- BOM Challenge   ?????  Not solved
 
+   The Challenge is a figure (No Code)
+*/
 
+//#################################################################################//
 
 
+/*
+  14- Destructuring Challenge
 
 
+let chosen = 3;
 
+let myFriends = [
+  { title: "Osama", age: 39, available: true, skills: ["HTML", "CSS"] },
+  { title: "Ahmed", age: 25, available: false, skills: ["Python", "Django"] },
+  { title: "Sayed", age: 33, available: true, skills: ["PHP", "Laravel"] },
+];
 
+*/
 
+//#################################################################################//
 
 
+/*
+  15- Map And Set Challenge                
 
+  Map And Set + What You Learn => Challenge
+  Requirements
+  - You Cant Use Numbers Or True Or False
+  - Don't Use Array Indexes
+  - You Cant Use Loop
+  - You Cant Use Any Higher Order Function
+  - Only One Line Solution Inside Console
+  - If You Use Length => Then Only Time Only
+  Hints
+  - You Can Use * Operator Only In Calculation
+  - Set
+  - Spread Operator
+  - Math Object Methods
 
 
+let n1 = [10, 30, 10, 20];
+let n2 = [30, 20, 10];
 
+console.log("Your Solution Here"); // 210
 
+*/
 
+//#################################################################################//
 
+/*
+ 16- Regular Expression Challenge
 
+let url1 = 'elzero.org';
+let url2 = 'http://elzero.org';
+let url3 = 'https://elzero.org';
+let url4 = 'https://www.elzero.org';
+let url5 = 'https://www.elzero.org:8080/articles.php?id=100&cat=topics';
 
+let re = //;
 
+console.log(url1.match(re));
+console.log(url2.match(re));
+console.log(url3.match(re));
+console.log(url4.match(re));
+console.log(url5.match(re));
 
+*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//#################################################################################//
 
 
 
