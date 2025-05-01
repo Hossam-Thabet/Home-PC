@@ -1222,7 +1222,7 @@ document.write(`<div>We Have X Admins</div>`);
 // }
 // console.log(swappedName1.join(""));
 
-//--------------------------------------------------------------------------------//
+//---------------------------------------------------------------------------------------------//
 
 // Assignment (7 of 7)
 
@@ -1236,7 +1236,7 @@ document.write(`<div>We Have X Admins</div>`);
 //   }
 // }
 
-//################################################################################//
+//##############################################################################################//
 
 
 //-----------------------//
@@ -1262,7 +1262,7 @@ document.write(`<div>We Have X Admins</div>`);
 
 /* 
 =======================================
- 9- Random Argument Function Challenge         
+ 9- Random Argument Function Challenge      Reviewed    
 =======================================
 */
 
@@ -1301,76 +1301,42 @@ showDetails(false, "Osama", 38); // "Hello Osama, Your Age Is 38, You Are Not Av
 //       ? status1 = "You Are Available" 
 //       : status1 = "You Are not Available"
 //   }
-//    document.write(`Hello "${string1}", Your Age Is "${number1}" , #${status1}#`);
+//    document.write(`Hello "${string1}", Your Age Is "${number1}" , ${status1}`);
 //    document.write(`</div>`);
 // }
-//  showDetails("Osama", 38, true); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
-//  showDetails(388, "Osaama", true); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
-//  showDetails(true, 38, "Oosama"); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
-//  showDetails(false, "Osama", 38); // "Hello Osama, Your Age Is 38, You Are Not Available For Hire"
+//  showDetails("Osama", 38, true); // "Hello Osama, Your Age Is 38, You Are Available "
+//  showDetails(388, "Osaama", true); // "Hello Osama, Your Age Is 38, You Are Available "
+//  showDetails(true, 38, "Oosama"); // "Hello Osama, Your Age Is 38, You Are Available "
+//  showDetails(false, "Osama", 38); // "Hello Osama, Your Age Is 38, You Are Not Available "
 
 //################################################################################//
 
 
 //-----------------------//
-// ASSIGNMENTS (57 - 63) //       ??????? Not Sure
+// ASSIGNMENTS (57 - 63) //       Reviewed
 //-----------------------//
 
 // Assignment (1 of 6)
 
-// Assignment (2 of 6)
-
-// Assignment (3 of 6)
-
-// Assignment (4 of 6)
-
-// Assignment (5 of 6)
-
-// Assignment (6 of 6)
-
-//57 - 63
 // function sayHello(theName,theGender = "") {
-// document.write(`<div>`);
-//   if (theGender == "Male") {
-//     theGender = "Mr" ; 
-//   }else if(theGender == "Female"){
-//     theGender = "Miss";
+//   document.write(`<div>`);
+//     if (theGender == "Male") {
+//       theGender = "Mr" ; 
+//     }else if (theGender == "Female"){
+//       theGender = "Miss";
+//     }
+//     document.write(`Hello ${theGender} ${theName}`) ;
+//   document.write(`</div>`);
 //   }
-//   document.write(`Hello ${theGender} ${theName}`) ;
-// document.write(`</div>`);
-// }
+  
+//   // Needed Output
+//    sayHello("Osama", "Male"); // "Hello Mr Osama"
+//    sayHello("Eman", "Female"); // "Hello Miss Eman"
+//    sayHello("Sameh"); // "Hello Sameh"
 
-// // Needed Output
-//  sayHello("Osama", "Male"); // "Hello Mr Osama"
-//  sayHello("Eman", "Female"); // "Hello Miss Eman"
-//  sayHello("Sameh"); // "Hello Sameh"
+//---------------------------------------------------------------------------------------------//
 
-// function createSelectBox(startYear, endYear) {
-//   // Your Code Here
-// document.write(`<select>`);
-// for (i = startYear;i <= endYear; i++){
-//   document.write(`<option value="${i}">${i}</option>`)
-// }
-// document.write(`</select>`);
-
-// }
-// createSelectBox(2000, 2021);
-
-
-// function multiply(...arg) {
-//   let result =1;
-//   for (let i=0; i<arg.length; i++){
-//     if (typeof arg[i] == "string") continue;
-//     arg[i] = Math.trunc(arg[i]);
-//     result *= arg[i]; 
-//   }
-//   console.log(result);
-// }
-
-// multiply(); // 200
-// multiply("A", 10, 30); // 300
-// multiply(100.5, 10,12.5,2.055,15, "B"); // 1000
-
+// Assignment (2 of 6)
 
 // function calculate(firstNum, secondNum, operation = firstNum + secondNum) {
  
@@ -1391,8 +1357,12 @@ showDetails(false, "Osama", 38); // "Hello Osama, Your Age Is 38, You Are Not Av
 // calculate(20, 30, 'subtract'); // -10
 // calculate(20, 30, 'multiply'); // 600
 
+//---------------------------------------------------------------------------------------------//
+
+// Assignment (3 of 6)
+
 // function ageInTime(theAge) {
-//   // Your Code Here
+  
 //   let AgeByMonths = theAge * 12 ;
 //   let AgeByWeeks = theAge * 12 * 4;
 //   let AgeByDays = theAge * 365 ;
@@ -1410,12 +1380,95 @@ showDetails(false, "Osama", 38); // "Hello Osama, Your Age Is 38, You Are Not Av
 // ageInTime(110); // Age Out Of Range
 // ageInTime(38); // Months Example => 456 Months
 
-//################################################################################//
+//---------------------------------------------------------------------------------------------//
+
+// Assignment (4 of 6)
+
+// function checkStatus(a, b, c) {
+  
+//   document.write(`<div>`);
+//   let string1 , number1 , status1 ;
+//   // Check a
+//   if (typeof a === "string") {
+//     string1 = a;
+//   } else if (typeof a === "number") {
+//     number1 = a;
+//   } else {
+//     status1 = a;
+//   }
+//   // Check b
+//   if (typeof b === "string") {
+//     string1 = b
+//   } else if (typeof b === "number") {
+//     number1 = b
+//   } else {
+//     status1 = b;
+//   }
+//   // Check c
+//   if (typeof c === "string") {
+//     string1 = c
+//   } else if (typeof c === "number") {
+//     number1 = c
+//   } else {
+//     status1 = c;
+//   }
+
+//   if (status1) {
+//     status1 = "You Are Available For Hire."
+//   } else {
+//     status1 = "You Are Not Available For Hire."
+//   }
+  
+//   document.write(`Hello "${string1}", Your Age Is "${number1}" , ${status1}`);
+//   document.write(`</div>`);
+// }
+
+// // Needed Output
+// checkStatus("Osama", 38, true); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+// checkStatus(38, "Osama", true); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+// checkStatus(true, 38, "Osama"); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+// checkStatus(false, "Osama", 38); // "Hello Osama, Your Age Is 38, You Are Not Available For Hire"
+
+
+//---------------------------------------------------------------------------------------------//
+
+// Assignment (5 of 6)
+
+// function createSelectBox(startYear, endYear) {
+//   // Your Code Here
+// document.write(`<select>`);
+// for (i = startYear;i <= endYear; i++){
+//   document.write(`<option value="${i}">${i}</option>`)
+// }
+// document.write(`</select>`);
+
+// }
+// createSelectBox(2000, 2021);
+
+//---------------------------------------------------------------------------------------------//
+
+// Assignment (6 of 6)
+
+// function multiply(...arg) {
+//   let result =1;
+//   for (let i=0; i<arg.length; i++){
+//     if (typeof arg[i] == "string") continue;
+//     arg[i] = Math.trunc(arg[i]);
+//     result *= arg[i]; 
+//   }
+//   console.log(result);
+// }
+
+// multiply(10,20); // 200
+// multiply("A", 10, 30); // 300
+// multiply(100.5, 10,12.5,2.055,15, "B"); // 1000
+
+//#####################################################################################//
 
 
 /* 
 ==============================
- 10- Arrow Function Challenge        
+ 10- Arrow Function Challenge     Reviewed   
 ==============================
 */
 
@@ -1433,8 +1486,24 @@ let names = function () {
 
 console.log(names("Osama", "Mohamed", "Ali", "Ibrahim"));
 // String [Osama], [Mohamed], [Ali], [Ibrahim] => Done !
+*/
 
-=================================
+//The Answer
+
+// let names = function (...arg) {
+//   // Parameter ?
+//   return `String [${arg.join("], [")}] => Done !`;
+// };
+
+// names = (...arg) =>`String [${arg.join("], [")}] => Done !`;
+
+// console.log(names("Osama", "Mohamed", "Ali", "Ibrahim"));
+// // String [Osama], [Mohamed], [Ali], [Ibrahim] => Done !
+
+//---------------------------------------------------------------------------------------//
+
+/*
+// The Challenge
 
 // [1] Replace ??? In Return Statement To Get The Output
 // [2] Create The Same Function With Regular Syntax
@@ -1447,84 +1516,19 @@ let calc = (one, two, ...nums) => "???";
 console.log(calc(10, "???", "???")); // 80
 */
 
-//The Answer
-
-// [1] One Statement In Function
-// [2] Convert To Arrow Function
-// [3] Print The Output [Arguments May Change]
-
-// let names = function (...arg) {
-//   // Parameter ?
-//   return `String [${arg.join("], [")}] => Done !`;
-// };
-
-// let names = (...arg) =>`String [${arg.join("], [")}] => Done !`;
-
-
-// console.log(names("Osama", "Mohamed", "Ali", "Ibrahim"));
-// String [Osama], [Mohamed], [Ali], [Ibrahim] => Done !
-
-//--------------------------------------------------------------------------------//
-
-// [1] Replace ??? In Return Statement To Get The Output
-// [2] Create The Same Function With Regular Syntax
-// [3] Use Array Inside The Arguments To Get The Output
-
-// let myNumbers = [20, 50, 10, 60];
-
-// let calc = (one, two, ...nums) => one + two + nums[+true];
-
-// console.log(calc(10, myNumbers[+false], ...myNumbers)); // 80
-
-// let myNumbers = [20, 50, 10, 60];
-
-// let calc = function (one, two, ...nums) {
-// return one + two + nums[+true];
-// } ;
-
-// console.log(calc(10, myNumbers[+false], ...myNumbers)); // 80
-
-//################################################################################//
-
-
-/*
-   Arrow Function Challenges    (Alternate)
-*/
-
-// [1] One Statement In Function
-// [2] Convert To Arrow Function
-// [3] Print The Output [Arguments May Change]
-
-// let names = function (...arg) {
-  
-//      return `String [${arg.join("], [")}] => Done !` ;
-//   }
-
-//   let names = (...arg) => `String [${arg.join("], [")}] => Done !` ;
- 
-  
-// console.log(names("Osama", "Mohamed", "Ali", "Ibrahim"));
-// // String [Osama], [Mohamed], [Ali], [Ibrahim] => Done !
-
-// /* ================================= */
-
-// // [1] Replace ??? In Return Statement To Get The Output
-// // [2] Create The Same Function With Regular Syntax
-// // [3] Use Array Inside The Arguments To Get The Output
-
-
+// The Answer
 
 // let myNumbers = [20, 50, 10, 60];
 
 // let calc = (one, two, ...nums) => one + two + nums[1];
 
-// console.log(calc(10, myNumbers[0], myNumbers)); // 80  
+// console.log(calc(10, myNumbers[0], ...myNumbers)); // 80  
 
 //###############################################################################//
 
 
 //-----------------------//
-// ASSIGNMENTS (64 - 70) // 
+// ASSIGNMENTS (64 - 70) //    Reviewed
 //-----------------------//
 
 // Assignment (1 of 4)
@@ -1567,19 +1571,10 @@ console.log(calc(10, "???", "???")); // 80
 
 // Assignment (2 of 4)
 
-// a = "Osama Mohamed"
-// b = a.split(" ");
-// console.log();
-// console.log(`${b[0]} ${b[1][0].toUpperCase()}.`);
-
 //  let itsMe = () => `Iam A Normal Function`;
-
-
 // console.log(itsMe()); // Iam A Normal Function
 
 // urlCreate = (protocol, web, tld) =>`${protocol}://www.${web}.${tld}`;
-
-
 // console.log(urlCreate("https", "elzero", "org")); // https://www.elzero.org
 
 //--------------------------------------------------------------------------------//
@@ -1591,17 +1586,6 @@ console.log(calc(10, "???", "???")); // 80
 // console.log(checker("Osama")("Available")(4000)); // Osama, My Salary Is 4000
 // console.log(checker("Ahmed")("Not Available")()); // Iam Not Avaialble
 
-// function checker(zName) {
-//   return function (status) {
-//     return function (salary) {
-//       return status === "Available" ? `${zName}, My Salary Is ${salary}` : `Iam Not Avaialble`;
-//     };
-//   };
-// }
-
-// console.log(checker("Osama")("Available")(4000)); // Osama, My Salary Is 4000
-// console.log(checker("Ahmed")("Not Available")()); // Iam Not Avaialble
-
 //--------------------------------------------------------------------------------//
 
 // Assignment (4 of 4)
@@ -1610,44 +1594,43 @@ console.log(calc(10, "???", "???")); // 80
 //   // Your Code Here
 //   let result = 0;
 //   let result1 = 0 ;
-//   for (let i=0; i<data.length;i++){
-     
-//     if (typeof parseInt(data[i]) === "number" && !isNaN(parseInt(data[i])) ){
+//   for (let i=0; i<data.length;i++) {
+//     if (typeof parseInt(data[i]) === "number"  ) {
 //       result += parseInt(data[i]);
 //       }
 //       if (typeof data[i] === "string" && isNaN(parseInt(data[i])) ) {
 //         result1++ ;
-//         if (result1 === data.length){
+//         if (result1 === data.length) {
 //           return "All Is String"; 
 //         } 
 //       }
 //     }
-//      return result;
+//      return `The result is ${result}`;
 //   }
 
 // console.log(specialMix(10, 20, 30)); // 60
 // console.log(specialMix("10Test", "Testing", "20Cool")); // 30
 // console.log(specialMix("Testing", "10Testing", "40Cool" )); // 50
-// console.log(specialMix("Test", "Cool", "Test")); // All Is Strings
+// console.log(specialMix("Test", "Cool", "Test" ,"hello")); // All Is Strings
 
 //################################################################################//
 
 /* 
 =======================================
- 11- Higher Order Functions Challenges        
+ 11- Higher Order Functions Challenges      Reviewed    
 =======================================
 */
 
 /*
 //The Challenge
 
-  You Can Use
+You Can Use
   - ,
   - _
   - Space
   - True => 1 => One Time Only In The Code
 
-  You Cannot Use
+You Cannot Use
   - Numbers
   - Letters
 
@@ -1656,59 +1639,58 @@ console.log(calc(10, "???", "???")); // 80
   - All In One Chain
 
 let myString = "1,2,3,EE,l,z,e,r,o,_,W,e,b,_,S,c,h,o,o,l,2,0,Z";
-
 let solution = '?????';
-
 console.log(solution); // Elzero Web School
 */
 
 //The Answer
 
 // let myString = "1,2,3,EE,l,z,e,r,o,_,W,e,b,_,S,c,h,o,o,l,2,0,Z";
-// c = isNaN(myString);
-// console.log(c);
-// let lele = myString.split("").filter((ele) => !isNaN(ele) )
-// .reduce(function (acc , cur){
-//  return  ++acc + ++cur; 
-// },+false)
 
-// let solution = myString.split("")
-// .filter(function (ele){return isNaN(ele)})
-// .filter((ele) => ele !==","  )
+// let solution = myString.split("")           //Return an array from the string
+// .filter(function (ele){
+//   return isNaN(ele)})                       //Return an array without the numbers 
+// .filter((ele) => ele !=="," )               //Return an array without ,
 // .reduce(function (acc , cur) {
-// return acc + cur;})
-// .split("").slice(true ,18)
-// .map(function (ele) {
+//   return acc + cur;})                        //Return a string from the array
+// .split("")                                   //Return an array from the string
+// .slice(true ,-isNaN(myString))               //Return an array without start & end 
+// .map(function (ele) {                        // isNaN(mystring) = true
 //   ele === "_" ? ele = " ": "";
 //   return ele
-// }).join("");
-
+// })                                  
+// .join("");                                    // convert the array to string
 // console.log(solution); // Elzero Web School
 
 //################################################################################//
 
+
 //-----------------------//
-// ASSIGNMENTS (71 - 78) // 
+// ASSIGNMENTS (71 - 78) //    Reviewed
 //-----------------------//
 
-//   1 of 5   
+// Assignment (1 of 5)  
+
 // let mix = [1, 2, 3, "E", 4, "l", "z", "e", "r", 5, "o"];
 // let solution1 = mix.map((ele) => typeof ele === "number" ? ele="":ele)
-// .reduce((acc,cur) => acc+cur);
+// .reduce((acc,cur) => acc+cur); 
 
-// // Elzero
+// console.log(solution1);   // Elzero
 
-// console.log(solution1);
+//--------------------------------------------------------------------------------//
 
-//    2 of 5 
+// Assignment (2 of 5) 
+
 // let myString = "EElllzzzzzzzeroo";
 // let solution2 = myString.split("")
-// .filter((ele ,i) => myString.indexOf(ele) === i )
+// .filter((ele , i) => myString.indexOf(ele) === i )
 // .join("");
 
-// // Elzero
+// console.log(solution2);   // Elzero
 
-//    3 of 5
+//--------------------------------------------------------------------------------//
+
+// Assignment (3 of 5) 
 
 // let myArray = ["E", "l", "z", ["e", "r"], "o"];
 
@@ -1717,20 +1699,24 @@ console.log(solution); // Elzero Web School
 //   console.log(`current is ${cur}`);
 //   console.log(`#######`)
 //  return acc.concat(cur);
-// }, []);
-// console.log(solution3);
+// }, [])
+// .join("");
+// console.log(solution3);   // Elzero
 
-//    4 of 5
+//--------------------------------------------------------------------------------//
+
+// Assignment (4 of 5) 
 
 // let numsAndStrings = [1, 10, -10, -20, 5, "A", 3, "B", "C"];
-// let solution4 = numsAndStrings.filter((ele)=> typeof ele !== "string")
+// let solution4 = numsAndStrings
+// .filter((ele)=> typeof ele !== "string")
 // .map((ele) => -ele) ;
 
-// // [-1, -10, 10, 20, -5, -3]
+// console.log(solution4);   // [-1, -10, 10, 20, -5, -3]
 
-// console.log(solution4);
+//--------------------------------------------------------------------------------//
 
-//    5 of 5
+// Assignment (5 of 5) 
 
 // let nums = [2, 12, 11, 5, 10, 1, 99];
 // let solution5 = nums.reduce(function (acc , cur) {
@@ -1739,70 +1725,68 @@ console.log(solution); // Elzero Web School
 //   console.log(`########`);
 //   if (cur %2 === 0) {
 //     acc *= cur;
-//   }else {acc += cur};
+//   } else {acc += cur};
 // return acc ;
 // },1);
 
-// // 500
-// console.log(solution5);
+// console.log(solution5);    // 500
 
 //##############################################################################//
 
 
 //-----------------------//
-// ASSIGNMENTS (79 - 85) // 
+// ASSIGNMENTS (79 - 85) //    Reviewed
 //-----------------------//
 
 
-//    1 of 4
+// Assignment (1 of 4)
 
 // let member = {
 //   name : "Elzero",
 //   country: "Egypt",
 //   age:38,
 //   fullDetails: function (){
-//     return `My Name Is ${name},My Age Is ${this.age}, I Live in ${this.country}`
+//     return `My Name Is ${this.name}, My Age Is ${this.age}, I Live in ${this.country}.`
 //   }
 // };
 
 // console.log(member.name); // Elzero
 // console.log(member.age); // 38
 // console.log(member.country); // Egypt
-// console.log(member.fullDetails());
-// My Name Is Elzero, My Age Is 38, I Live in Egypt
+// console.log(member.fullDetails()); 
+// //My Name Is Elzero, My Age Is 38, I Live in Egypt
 
+//--------------------------------------------------------------------------------//
 
-//    2 of 4
-// Method One
-// Create Your Object Here
+// Assignment (2 of 4)
+
+//  // Method One
 
 // let objMethodOne = {property:1};
 
 // console.log(objMethodOne.property); // "Method One"
 
-// Method Two
-// Create Your Object Here
+// // Method Two
 
 // let objMethodTwo = new Object({property :2});
 
 // console.log(objMethodTwo.property); // "Method Two"
 
-// Method Three
-// Create Your Object Here
+// // Method Three
 
 // let objMethodThree = Object.create({property:3});
 
 // console.log(objMethodThree.property); // "Method Three"
 
-// Method Four
-// Create Your Object Here
+// // Method Four
 
 // let objMethodFour = Object.assign({property:4});
 
 // console.log(objMethodFour.property); // "Method Four"
 
+//--------------------------------------------------------------------------------//
 
-//    3 of 4
+// Assignment (3 of 4)
 
 // let a = 1;
 // let threeNums = {
@@ -1818,10 +1802,11 @@ console.log(solution); // Elzero Web School
 // let finalObject = Object.assign({},{a},threeNums,twoNums)
 // console.log(finalObject);
 
+//--------------------------------------------------------------------------------//
 
-//    4 of 4
+// Assignment (4 of 4)
 
-// The Object To Work With
+// // The Object To Work With
 // let myFavGames = {
 //   "Trinity Universe": {
 //     publisher: "NIS America",
@@ -1847,8 +1832,7 @@ console.log(solution); // Elzero Web School
 //   },
 // };
 
-
-// Code One => How To Get Object Length ?
+// // Code One => How To Get Object Length ?
 
 // let objectLength = Object.keys(myFavGames).length;
 // let objectArr = Object.keys(myFavGames["Trinity Universe"]);
@@ -1860,11 +1844,11 @@ console.log(solution); // Elzero Web School
 // console.log(objectArr1);
 
 //  for (let i = 0; i < objectLength; i++) {
-//   console.log(`The Game Name Is ${Object.keys(myFavGames)[i]}`);
+//   console.log(`The Game Name Is ${Object.keys(myFavGames)}`);
 //   console.log(`The Publisher Is ${myFavGames[Object.keys(myFavGames)[i]]["publisher"]}`);
 //   console.log(`The Price Is ${myFavGames[Object.keys(myFavGames)[i]]["price"]}`);
 
-//Check If Nested Object Has Property (bestThree)
+// // Check If Nested Object Has Property (bestThree)
 
 //   if (myFavGames[Object.keys(myFavGames)[i]].hasOwnProperty("bestThree")) {
 //       console.log("- Game Has Releases");
@@ -1883,47 +1867,53 @@ console.log(solution); // Elzero Web School
 // ASSIGNMENTS (86 - 93) // 
 //-----------------------//
 
-//  1 of 6 
+// Assignment (1 of 6)
+
 //html <div id="elzero" class="element" name="js">JavaScript</div>
 
-// console.log(document.querySelector("div"));
-// console.log(document.querySelector("#elzero"));
-// console.log(document.querySelector(".element"));
-// console.log(document.querySelector("div[name]"));
-// console.log(document.querySelector("[name = 'js']"));
-// console.log(document.querySelectorAll("div")[0]);
-// console.log(document.querySelectorAll("#elzero")[0]);
-// console.log(document.querySelectorAll(".element")[0]);
-// console.log(document.querySelectorAll("div[name]")[0]);
-// console.log(document.getElementsByTagName("div")[0]);
-// console.log(document.getElementsByClassName("element")[0]);
-// console.log(document.getElementById("elzero"));
-// console.log(document.getElementsByName("js")[0]);
-// console.log(document.body.children[0]);
-// console.log(document.body.childNodes[0]);
-// console.log(document.body.firstChild);
-// console.log(document.body.firstElementChild);
+// console.log(document.querySelector("div"));                  //1
+// console.log(document.querySelector("#elzero"));              //2
+// console.log(document.querySelector(".element"));             //3
+// console.log(document.querySelector("div[name]"));            //4
+// console.log(document.querySelector("[name = 'js']"));        //5
+// console.log(document.querySelectorAll("div")[0]);            //6
+// console.log(document.querySelectorAll("#elzero")[0]);        //7
+// console.log(document.querySelectorAll(".element")[0]);       //8
+// console.log(document.querySelectorAll("div[name]")[0]);      //9
+// console.log(document.getElementsByTagName("div")[0]);        //10
+// console.log(document.getElementsByClassName("element")[0]);  //11
+// console.log(document.getElementById("elzero"));              //12
+// console.log(document.getElementsByName("js")[0]);            //13
+// console.log(document.body.children[0]);                      //14
+// console.log(document.body.childNodes[0]);                    //15
+// console.log(document.body.firstChild);                       //16
+// console.log(document.body.firstElementChild);                //17
 
-//  2 of 6
+//--------------------------------------------------------------------------------//
+
+// Assignment (2 of 6)
 
 // for(let i=0;i<document.images.length;i++){
 //   document.getElementsByTagName("img")[i].setAttribute("src","https://elzero.org/wp-content/themes/elzero/imgs/logo.png");
-//   document.getElementsByTagName("img")[i].alt = "Elzero Logo";
+//   document.querySelectorAll("div img[alt]")[i].alt = "Elzero Logo";
 //   document.images[i].style = "background-color:red" ;
 //   console.log(document.images[i].alt);
 // };
 
-//  3 of 6
+//--------------------------------------------------------------------------------//
+
+// Assignment (3 of 6)
 
 // let input1 = document.forms[0][0];
 // let output1= document.getElementsByClassName("result")[0];
 // console.log(output1);
 //  input1.oninput = function(){
-//   output1.innerHTML = `{${input1.value}} USD Dollar = ${(input1.value * 15.6).toFixed(2)}} Egyptian Pound`;
+//   output1.innerHTML = `{${input1.value}} USD Dollar = {${(input1.value * 15.6).toFixed(2)}} Egyptian Pound`;
 // }
 
+//--------------------------------------------------------------------------------//
 
-//  4 of 6
+// Assignment (4 of 6)
 
 // let divOne = document.querySelector(".one");
 // let divTwo = document.querySelector(".two");
@@ -1931,11 +1921,14 @@ console.log(solution); // Elzero Web School
 // divOne.title = divOne.className;
 // divTwo.title = divTwo.className;
 
-// let divOneContent = divOne.innerHTML;
+// let divOneContent = divOne.innerHTML;    // divOneContent = Two
 // divOne.innerHTML = divTwo.innerHTML;
-// divTwo.innerHTML = `${divOneContent} ${divTwo.attributes.length}`;
+// divTwo.innerHTML = `${divOneContent} ${divOne.attributes.length}`;
 
-//  5 of 6
+//--------------------------------------------------------------------------------//
+
+// Assignment (5 of 6)
+
 // let img1 = document.querySelectorAll("img");
 // for (let i=0;i<img1.length;i++){
 //    if (img1[i].hasAttribute("alt")){
@@ -1945,67 +1938,85 @@ console.log(solution); // Elzero Web School
 //   };
 // };
 
+//--------------------------------------------------------------------------------//
 
-//  6 of 6
+// Assignment (6 of 6)
 
-// let input = document.querySelectorAll(".input");
-// submit = document.querySelector("[type= 'submit']");
-// box = document.querySelectorAll(".box");
+// let input = document.querySelectorAll(".input");          // Select inputs and select fields 
+// let submit = document.querySelector("[type= 'submit']");  // Select Submit button 
 
+// // inputs and select fields  style
 // for(let i = 0; i < input.length; i++){
 //   input[i].style.display = "block";
 //   input[i].style.boxSizing = "border-box";
 //   input[i].style.width = "250px";
 //   input[i].style.padding = "10px";
+//   input[i].style.backgroundColor = "#f5f5fa";
 //   input[i].style.margin = "15px auto";
 //   input[i].style.borderRadius = ".5rem";
-//   input[i].style.border = "1px solid black";
+//   input[i].style.border = "1px solid black"; 
 // }
-
-// submit.style.backgroundColor = "gray";
+// // Submit button style (create) 
+// submit.style.backgroundColor = "#009784";
 // submit.style.display = "block";
 // submit.style.width = "250px";
 // submit.style.padding = "10px";
 // submit.style.borderRadius = ".5rem";
 // submit.style.border = "none";
 // submit.style.margin = "15px auto";
-// submit.style.color = "white";
+// submit.style.color = "white";           
 
-// let elNum = document.getElementsByName("elements")[0];
-// form = document.forms;
-// type = document.querySelector("select");
-// text = document.getElementsByName("texts")[0];
-// results = document.querySelector(".results");
+
+// let form = document.forms;                               //Select the form element
+// let elNum = document.getElementsByName("elements")[0];   //Select number field
+// let type = document.querySelector("select");             //Select the select field 
+// let text = document.getElementsByName("texts")[0];       //Select the text field
+// let results = document.querySelector(".results");        // div containing the output
 
 // form[0].onsubmit = function(el){
-//     el.preventDefault();
-//     document.querySelectorAll(".box").forEach(el => el.remove());
+//   let box = document.querySelectorAll(".box");  // Select the created elements
+//   box.forEach(el => el.remove());   // Remove the previous result
+//   el.preventDefault();              // Prevent the form to send data           
 
-//     for(let i = 1; i <= elNum.value; i++){
-//         let myEl = document.createElement(type.value);
-//         let myText = document.createTextNode(text.value);
+//   // For Loop for creating & styling & adding elements in the main div
+//   for(let i = 1; i <= elNum.value; i++){
+//     // create div or section accoring to selection option
+//     let myEl = document.createElement(type.value);
+//     // create text from the text entered
+//     let myText = document.createTextNode(text.value);  
 
-//         myEl.className = "box";
-//         myEl.title = "Element";
-//         myEl.id = `id-${i}`;
+//     // Add the attributes to the created elemnet
+//     myEl.className = "box";
+//     myEl.title = "Element";
+//     myEl.id = `id-${i}`;
 
-//         myEl.style.display = "inline-block";
-//         myEl.style.width = "100px";
-//         myEl.style.margin = "20px";
-//         myEl.style.padding = "10px";
-//         myEl.style.color = "white";
-//         myEl.style.backgroundColor = "blue";
-//         myEl.style.textAlign = "center";
-//         myEl.style.borderRadius = ".5rem";
+//     // element(div or section) output style
+//     myEl.style.display = "block";
+//     myEl.style.width = "30%";
+//     myEl.style.margin = "10px";
+//     myEl.style.padding = "15px";
+//     myEl.style.color = "white";
+//     myEl.style.backgroundColor = "#fc551f";
+//     myEl.style.textAlign = "center";
+//     myEl.style.borderRadius = ".5rem";
+//     myEl.style.boxSizing = "border-box";
 
-//         myEl.appendChild(myText);
-//         results.appendChild(myEl);
+//     results.appendChild(myEl);    // add each output elements to the main div
+//     myEl.appendChild(myText);     // add text to each output element
 //     }
+
+//   // The Container div Style  
+//   results.style.display= "flex";
+//   results.style.flexWrap = "wrap";
+//   results.style.justifyContent = "space-between";
+//   results.style.marginInline= "40px";
 // };
 
 //#################################################################################//
 
+
 // Challenge in video 90 (create 100 cards using looping)
+
 // for (i=1;i<100;i++){
 //   let myElement = document.createElement("div");
 //   let myPara = document.createElement("p");
@@ -2021,6 +2032,8 @@ console.log(solution); // Elzero Web School
 //   myPara.appendChild(myText2);
 // };
 
+//#################################################################################//
+
 
 // Undefined Answer 2
 // let arr1 = [[1,2],[3,4],[5,6]];
@@ -2030,49 +2043,88 @@ console.log(solution); // Elzero Web School
 //     console.log(arr1[i][j]);
 //   }
 //   console.log(arr1[i]);
-// }
+// };
+
+//#################################################################################//
 
 
-
-
-
-
-
-
-
-
-
-
-
+/* 
+===================
+ 12- DOM Challenge    Not solved   
+===================
+*/
 
 /*
-   12- DOM Challenge   ?????  Not solved
-
-   The Challenge is a figure (No Code)
+  The Challenge is a figure (No Code)
 */
+
+// The Answer
+
+
+
+
 
 //#################################################################################//
 
 //----------------------- //
-// ASSIGNMENTS (94 - 101) //    ????? Not solved yet 
+// ASSIGNMENTS (94 - 101) //    Not solved  
 //----------------------- //
 
-// 1 of 5    
+// Assignment (1 of 5)
+
+
+//--------------------------------------------------------------------------------//
 
 //#################################################################################//
 
-/*
-   13- BOM Challenge   ?????  Not solved
 
+//----------------------- //
+// ASSIGNMENTS (102 - 110) //    Not solved  
+//----------------------- //
+
+// Assignment (1 of 5)
+
+
+//--------------------------------------------------------------------------------//
+
+//#################################################################################//
+
+/* 
+===================
+ 13- BOM Challenge   Not solved 
+===================
+*/
+
+/*
    The Challenge is a figure (No Code)
 */
 
+// The Answer
+
+
+
 //#################################################################################//
 
 
-/*
-  14- Destructuring Challenge
+//----------------------- //
+// ASSIGNMENTS (111 - 114) //    Not solved  
+//----------------------- //
 
+// Assignment (1 of 2)
+
+
+//--------------------------------------------------------------------------------//
+
+//#################################################################################//
+
+/* 
+=============================
+ 14- Destructuring Challenge   Not solved 
+=============================
+*/
+
+/*
+// The Challenge
 
 let chosen = 3;
 
@@ -2081,41 +2133,81 @@ let myFriends = [
   { title: "Ahmed", age: 25, available: false, skills: ["Python", "Django"] },
   { title: "Sayed", age: 33, available: true, skills: ["PHP", "Laravel"] },
 ];
-
 */
+
+// The Answer
+
+
 
 //#################################################################################//
 
 
-/*
-  15- Map And Set Challenge                
+//----------------------- //
+// ASSIGNMENTS (115 - 122) //    Not solved  
+//----------------------- //
 
-  Map And Set + What You Learn => Challenge
-  Requirements
-  - You Cant Use Numbers Or True Or False
-  - Don't Use Array Indexes
-  - You Cant Use Loop
-  - You Cant Use Any Higher Order Function
-  - Only One Line Solution Inside Console
-  - If You Use Length => Then Only Time Only
-  Hints
-  - You Can Use * Operator Only In Calculation
-  - Set
-  - Spread Operator
-  - Math Object Methods
+// Assignment (1 of 6)
 
+
+//--------------------------------------------------------------------------------//
+
+//#################################################################################//
+
+/* 
+===========================
+ 15- Map And Set Challenge       Not solved 
+===========================
+*/
+
+/*              
+// The Challenge
+
+Map And Set + What You Learn => Challenge
+Requirements
+- You Cant Use Numbers Or True Or False
+- Don't Use Array Indexes
+- You Cant Use Loop
+- You Cant Use Any Higher Order Function
+- Only One Line Solution Inside Console
+- If You Use Length => Then Only Time Only
+Hints
+- You Can Use * Operator Only In Calculation
+- Set
+- Spread Operator
+- Math Object Methods
 
 let n1 = [10, 30, 10, 20];
 let n2 = [30, 20, 10];
 
 console.log("Your Solution Here"); // 210
-
 */
+
+// The Answer
+
+
 
 //#################################################################################//
 
+
+//----------------------- //
+// ASSIGNMENTS (123 - 133) //    Not solved  
+//----------------------- //
+
+// Assignment (1 of 8)
+
+
+//--------------------------------------------------------------------------------//
+
+//#################################################################################//
+
+/* 
+==================================
+ 16- Regular Expression Challenge     Not solved 
+==================================
+*/
+
 /*
- 16- Regular Expression Challenge
+// The Challenge
 
 let url1 = 'elzero.org';
 let url2 = 'http://elzero.org';
@@ -2130,10 +2222,70 @@ console.log(url2.match(re));
 console.log(url3.match(re));
 console.log(url4.match(re));
 console.log(url5.match(re));
-
 */
+
+// The answer
+
+
 
 //#################################################################################//
 
 
+//----------------------- //
+// ASSIGNMENTS (134 - 146) //    Not solved  
+//----------------------- //
 
+// Assignment (1 of 5)
+
+
+//--------------------------------------------------------------------------------//
+
+//#################################################################################//
+
+
+//----------------------- //
+// ASSIGNMENTS (147 - 158) //    Not solved  
+//----------------------- //
+
+// Assignment (1 of 5)
+
+
+//--------------------------------------------------------------------------------//
+
+//#################################################################################//
+
+
+//----------------------- //
+// ASSIGNMENTS (159 - 168) //    Not solved  
+//----------------------- //
+
+// Assignment (1 of 8)
+
+
+//--------------------------------------------------------------------------------//
+
+//#################################################################################//
+
+
+//----------------------- //
+// ASSIGNMENTS (169 - 178) //    Not solved  
+//----------------------- //
+
+// Assignment (1 of 4)
+
+
+//--------------------------------------------------------------------------------//
+
+//#################################################################################//
+
+
+//----------------------- //
+// ASSIGNMENTS (179 - 188) //    Not solved  
+//----------------------- //
+
+// Assignment (1 of 2)
+
+
+//--------------------------------------------------------------------------------//
+
+//#################################################################################//
