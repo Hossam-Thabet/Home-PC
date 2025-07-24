@@ -1908,7 +1908,7 @@ console.log(solution); // Elzero Web School
 // let output1= document.getElementsByClassName("result")[0];
 // console.log(output1);
 //  input1.oninput = function(){
-//   output1.innerHTML = `{${input1.value}} USD Dollar = {${(input1.value * 15.6).toFixed(2)}} Egyptian Pound`;
+//  output1.innerHTML = `{${input1.value}} USD Dollar = {${(input1.value * 15.6).toFixed(2)}} Egyptian Pound`;
 // }
 
 //--------------------------------------------------------------------------------//
@@ -1947,25 +1947,11 @@ console.log(solution); // Elzero Web School
 
 // // inputs and select fields  style
 // for(let i = 0; i < input.length; i++){
-//   input[i].style.display = "block";
-//   input[i].style.boxSizing = "border-box";
-//   input[i].style.width = "250px";
-//   input[i].style.padding = "10px";
-//   input[i].style.backgroundColor = "#f5f5fa";
-//   input[i].style.margin = "15px auto";
-//   input[i].style.borderRadius = ".5rem";
-//   input[i].style.border = "1px solid black"; 
+//   input[i].style.cssText = "display:block; box-sizing:border-box; width:250px;margin:15px auto; padding:10px; background-color:#f5f5fa; border-radius:.5rem; border:1px solid black; ";
 // }
-// // Submit button style (create) 
-// submit.style.backgroundColor = "#009784";
-// submit.style.display = "block";
-// submit.style.width = "250px";
-// submit.style.padding = "10px";
-// submit.style.borderRadius = ".5rem";
-// submit.style.border = "none";
-// submit.style.margin = "15px auto";
-// submit.style.color = "white";           
-
+// // Submit button style (create)
+// submit.style.cssText = "display:block; width:250px; border:none; margin:15px auto; padding: 10px; color: white; border-radius: 0.5rem; background-color:#009784;";
+     
 
 // let form = document.forms;                               //Select the form element
 // let elNum = document.getElementsByName("elements")[0];   //Select number field
@@ -1985,23 +1971,15 @@ console.log(solution); // Elzero Web School
 //     // create text from the text entered
 //     let myText = document.createTextNode(text.value);  
 
-//     // Add the attributes to the created elemnet
+//     // Add the attributes to the created element
 //     myEl.className = "box";
 //     myEl.title = "Element";
 //     myEl.id = `id-${i}`;
 
 //     // element(div or section) output style
-//     myEl.style.display = "block";
-//     myEl.style.width = "30%";
-//     myEl.style.margin = "10px";
-//     myEl.style.padding = "15px";
-//     myEl.style.color = "white";
-//     myEl.style.backgroundColor = "#fc551f";
-//     myEl.style.textAlign = "center";
-//     myEl.style.borderRadius = ".5rem";
-//     myEl.style.boxSizing = "border-box";
-
-//     results.appendChild(myEl);    // add each output elements to the main div
+//     myEl.style.cssText = "display:block; box-sizing:border-box; width:30%; margin:10px; padding:15px; color:white; text-align: center; bacground-color:#fc551f; border-radius:.5rem'";
+   
+//     results.appendChild(myEl);    // add each output element to the main div
 //     myEl.appendChild(myText);     // add text to each output element
 //     }
 
@@ -2050,48 +2028,345 @@ console.log(solution); // Elzero Web School
 
 /* 
 ===================
- 12- DOM Challenge    Not solved   
+ 12- DOM Challenge  
 ===================
 */
 
 /*
-  The Challenge is a figure (No Code)
+  The Challenge is a figure (No Code in the question)
 */
 
 // The Answer
 
+// let create = ele => document.createElement(`${ele}`);
 
+// // Create the header (elements & its content) //
+// let createHeader = create('header');
+// let createDiv = create('div');
+// let createUl = create("ul");
+// for (let i= 1;i<=4;i++) {
+//   let createList = create("li");
+//   createList.className = `menu-list-${i}`;
+//   createUl.append(createList);
+// }
 
+// // Add the Classes to the header
+// createHeader.classList.add("website-head");
+// createDiv.classList.add("logo");
+// createUl.className = "menu";
+// // Locate the header on page  (elements & content)
+// document.body.prepend(createHeader);
+// createHeader.prepend(createDiv);
+// createDiv.textContent = "Elzero";
+// createHeader.append(createUl);
+// document.querySelector(".menu-list-1").textContent = "Home";
+// document.querySelector(".menu-list-2").textContent = "Services";
+// document.querySelector(".menu-list-3").textContent = "About";
+// document.querySelector(".menu-list-4").textContent = "Contact";
+// console.log(document.querySelector(`.menu-list-1`));
 
+// // Style the header
+// createHeader.style.cssText = "display:flex; padding:20px; background-color: rgb(255,255,255); justify-content: space-between; align-items: center;";
+// createDiv.style.cssText = "color:green; font-weight: bold; font-family: Arial; font-size: 20px;";
+// createUl.style.cssText = "list-style-type:none; display:flex; column-gap:15px; font-size: 1.1rem;";
+
+// // Create & locate & style  the main & its content //
+// let createMain = create('main');
+// createHeader.after(createMain);
+// // Add the Classes to the main
+// createMain.classList.add("content");
+
+// for (let i=1 ; i<=15 ; i++) {
+//   let createItem = create('div');
+//   let createSpan = create('span');
+//   createItem.textContent = `${i}`;
+//   createSpan.textContent = "product";
+//   createMain.append(createItem);
+//   createItem.append(createSpan);
+//   // style
+//   createMain.style.cssText = "display:grid;grid-template-columns: auto auto auto; background-color:grey; padding: 5px;";
+//   createItem.style.cssText = "background-color: white; margin:5px; text-align: center; padding:5px; border-radius:0.25rem;";
+//   createSpan.style.cssText = "display:block;";
+// }
+
+// // Create the footer & its content //
+// let createFooter = create('footer');
+// // Add the Classes to the footer
+// createFooter.classList.add("website-foot");
+// // Locate the footer on page  (elements & content)
+// createMain.after(createFooter);
+// createFooter.innerHTML = "Copyright 2021";
+// // Style the footer
+// createFooter.style.cssText = "text-align:center; background-color:green; color:white; padding:15px; font-size: 1.2rem;font-weight:bold;";
 
 //#################################################################################//
 
 //----------------------- //
-// ASSIGNMENTS (94 - 101) //    Not solved  
+// ASSIGNMENTS (94 - 101) //     
 //----------------------- //
 
 // Assignment (1 of 5)
 
+// The solution in the html page file (in the script tag inside the head tag)
 
-//--------------------------------------------------------------------------------//
+//------------------------------------------------------------------------------//
+
+// Assignment (2 of 5)
+
+// let add = document.querySelector(".classes-to-add");
+// let remove = document.querySelector(".classes-to-remove");
+// let current = document.querySelector('[title="Current"]');
+// let cls = document.querySelector(".classes-list div");
+
+
+// function addRem() {
+//   // remove all span elements in the start
+//   document.querySelectorAll("span").forEach(el => el.remove());
+
+//   // add or remove classes
+//   for (let i=0 ; i < this.value.trim().split(" ").length; i++ ) {
+//     if (add.value) {
+//       current.classList.add(add.value.toLowerCase().trim().split(" ")[i]);
+//     }
+//     if (remove.value) {
+//       current.classList.remove(remove.value.toLowerCase().trim().split(" ")[i]);
+//   }
+    
+//   }
+//   this.value = "";
+//   // add or remove span
+
+//   if (current.classList.length) {
+//     [...current.classList].sort().forEach(el => {
+//       let clSpan = document.createElement("span");
+//       clSpan.textContent = el;
+//       cls.append(clSpan);
+//     });
+//   } else cls.textContent = "No Classes To Show";
+
+// }
+// add.onblur = addRem;
+// remove.onblur = addRem;
+
+//------------------------------------------------------------------------------//
+
+// Assignment (3 of 5)
+
+// Solution 1
+
+// document.querySelector("p").remove();
+// let currentDiv = document.querySelector(".our-element");
+// let div1 = document.createElement("div");
+// let div2 = document.createElement("div");
+// currentDiv.before(div1);
+// currentDiv.after(div2);
+// div1.className = "start";
+// div2.className = "end";
+// div1.textContent = "Start";
+// div2.textContent = "End";
+// div1.title = "Start Element";
+// div2.title = "End Element";
+// div1.setAttribute("data-value", "Start");
+// div2.setAttribute("data-value", "End");
+
+// Solution 2
+
+// let p = document.getElementsByTagName("p")[0];
+// let div = document.querySelector(".our-element");
+// let startDiv = div.cloneNode();
+// let endDiv = div.cloneNode();
+
+// p.remove();
+
+// function addAttr(el, ind){
+//   el.className = ind.toLowerCase();
+//   el.title = `${ind} element`;
+//   el.setAttribute("data-value", ind);
+//   el.textContent = ind;
+// }
+
+// addAttr(startDiv, "Start");
+// addAttr(endDiv, "End");
+// div.before(startDiv);
+// div.after(endDiv);
+
+//------------------------------------------------------------------------------//
+
+// Assignment (4 of 5)
+
+// Solution 1
+
+// console.log(document.querySelector("div").lastChild.textContent.trim());
+
+// Soution 2
+
+// console.log(document.querySelector("div").lastChild.nodeValue.trim());
+
+//------------------------------------------------------------------------------//
+
+// Assignment (5 of 5)
+
+// All the following are the same (tagName = nodeName = localName)
+
+// Solution 1
+
+// for (let i= 0; i<document.body.children.length ; i++) {
+//   let tag = document.body.children[i].tagName;
+//   document.body.children[i].onclick = function(){
+//   console.log(`This is ${tag}`) ;
+//   }   
+// }
+
+// Solution 2
+
+// let elements = [...document.body.children];
+// elements.forEach(el => (el.onclick = _ => console.log(`This is ${el.localName}`)));
+
+
+// Solution 3
+
+// let elements = [...document.body.children];
+// elements.forEach(e => e.onclick = event => console.log(`this is ${event.target.nodeName}`));
+
 
 //#################################################################################//
 
-
-//----------------------- //
-// ASSIGNMENTS (102 - 110) //    Not solved  
-//----------------------- //
+//------------------------ //
+// ASSIGNMENTS (102 - 110) //    
+//------------------------ //
 
 // Assignment (1 of 5)
 
+// Solution 1
+
+// let proMsg = prompt('Print Number From – To', 'Example:10-15 or 15-10');
+
+// if (Number(proMsg.split("-")[1]) > Number(proMsg.split("-")[0]) ) {
+//   for (let i= Number(proMsg.split("-")[0]) ; i <= proMsg.split("-")[1]; i++  ){
+//   console.log(i);
+//   }
+// } else {
+//   for (let i= Number(proMsg.split("-")[1]) ; i <= proMsg.split("-")[0]; i++  ){
+//   console.log(i);
+//   }
+// }
+
+// Solution 2
+
+// let prompMsg = prompt("Print Number From _ To _", "Example: 5-20");
+// let prompNum = prompMsg.split("-").sort((a, b) => a - b);
+
+// for (let i = +prompNum[0]; i <= prompNum[1]; i++) {
+//   let num = document.createElement("div");
+//   num.textContent = i;
+//   document.body.append(num);
+// }
 
 //--------------------------------------------------------------------------------//
+
+// Assignment (2 of 5)
+
+// Solution 1
+
+// let msg = document.querySelector(".message");
+// let closebtn = document.querySelector("button");
+
+// closebtn.onclick = _ => msg.style.display = "none";
+// setTimeout( _ => msg.style.display = "block",5000);
+
+// Soultion 2 (complete solution in javascript)
+
+// let parent = document.createElement("div");
+// let h1 = document.createElement("h1");
+// let p = document.createElement("p");
+// let btn = document.createElement("button");
+
+// function popup() {
+//   h1.textContent = "Welcome";
+//   p.textContent = "Welcome To Elzero Web School";
+//   btn.textContent = "X";
+
+//   parent.append(h1, p, btn);
+//   document.body.append(parent);
+
+//   btn.addEventListener("click", () => btn.parentElement.remove());
+
+//   document.body.style.cssText = "font-family: arial, Tahoma;";
+//   parent.style.cssText = "width: 350px; height: 150px; background-color: #eee; padding: 20px; border: 1px solid #ccc; position: relative; margin: 20px auto; text-align: center; ";
+//   btn.style.cssText = "background-color: red; color: white; width: 30px; height: 30px; border-radius: 50%; border: none; position: absolute; top: -10px ; right: -10px;";
+// }
+
+// setTimeout(popup, 5000);
+
+//--------------------------------------------------------------------------------//
+
+// Assignment (3 of 5)
+
+// Solution 1
+// let div = document.createElement("div");
+// div.textContent = "10";
+// document.body.append(div);
+// setInterval(function (){
+//   if (div.textContent > 0){
+//     div.textContent -=1;
+//   }  
+// },1000);
+
+// Solution 2
+// let div = document.createElement("div");
+// div.textContent = "10";
+// document.body.append(div);
+
+// function countdown(){
+//   div.textContent -= 1 ;
+//   if (div.textContent === "0"){
+//     clearInterval(counter);
+//   }
+// }
+
+// let counter = setInterval(countdown, 1000);
+
+//--------------------------------------------------------------------------------//
+
+// Assignment (4 of 5)
+
+// let div = document.createElement("div");
+// div.textContent = "10";
+// document.body.append(div);
+
+// function countdown(){
+//   div.textContent -= 1 ;
+//   if (div.textContent === "0"){
+//     location.href = "https://elzero.org";
+//   }
+// }
+
+// let counter = setInterval(countdown, 1000);
+
+//--------------------------------------------------------------------------------//
+
+// Assignment (5 of 5)
+
+// let div = document.createElement("div");
+// div.textContent = "10";
+// document.body.append(div);
+
+// function countdown(){
+//   div.textContent -= 1 ;
+//   if (div.textContent === "5"){
+//     window.open("https://elzero.org", "_blank" , "width=400,height=400,top=100,left=700");
+//   } else if (div.textContent === "0") {
+//     clearInterval(counter);
+//   }
+// }
+
+// let counter = setInterval(countdown, 1000);
 
 //#################################################################################//
 
 /* 
 ===================
- 13- BOM Challenge   Not solved 
+ 13- BOM Challenge  
 ===================
 */
 
@@ -2101,10 +2376,145 @@ console.log(solution); // Elzero Web School
 
 // The Answer
 
+// Solution 1 (Not exactly the required answer)
 
+// const inputField = document.querySelector('input[type="text"]');
+// const submitButton = document.querySelector('input[type="submit"]');
+// const container = document.querySelector('.container');
+
+// if (localStorage.length) {
+//   for (let i = 0; i < localStorage.length; i++) {
+//     let value = localStorage[localStorage.key(i)];
+//     let taskId = localStorage.key(i);
+//   createTask(value, taskId);
+//   }
+// }
+
+// submitButton.addEventListener('click', (event) => {
+//   event.preventDefault();
+//   if (inputField.value) {
+//     let taskId = `task-id-${(Math.random() * 10000).toFixed()}`;
+//     localStorage[taskId] = inputField.value;
+//     createTask(inputField.value, taskId);
+//   }
+// })
+
+// //Task creation
+// function createTask(value, taskId) {
+//   // First create Elements.
+//   const task = document.createElement('div');
+//   const button = document.createElement('button');
+//   const p = document.createElement('p');
+//   // Then add text and class.
+//   task.classList.add('task');
+//   p.textContent = value; // this value will be inputField.value or it will come from localStorage.
+//   button.textContent = 'Delete';
+//   // Then append them to the parent Elements.
+//   task.append(p, button);
+//   container.appendChild(task);
+//   inputField.value = '';
+//   deleteTask(button, taskId)
+// }
+
+// // Deleting a task.
+// function deleteTask(button, taskId) {
+//   button.addEventListener('click', () => {
+//     localStorage.removeItem(taskId)
+//     button.parentElement.remove();
+//   })
+// }
+
+
+// Solution 2 (the required answer)
+
+const stickyNotes = () => {
+	const form = document.forms[0];
+	const inputField = document.getElementById("input-field");
+	const tasksWrapper = document.querySelector(".tasks");
+	let randomIdNumber;
+
+	if (localStorage.Tasks) // if the tasks exist in local storage => appear it
+  renderElements(false, JSON.parse(localStorage.Tasks)); // appear it with bybass the 1st part of the function and using the local storage
+	
+	form.onsubmit = (e) => {
+		e.preventDefault();  
+		if (inputField.value.trim() === "") return;
+		randomIdNumber = Date.now();
+		renderElements(true);
+		addToLocalStorage();
+	};
+
+	// Update DOM and Locale Storage
+	tasksWrapper.addEventListener("click", (e) => {
+		if (!e.target.matches("#delete, .task")) return;
+
+		if (e.target.matches("#delete")) {
+			e.target.parentElement.remove();
+		} else e.target.classList.toggle("done");
+		updateLocalStorage();
+	});
+
+	function renderElements(newElement, elements) {
+		// Add a new element to the DOM.
+		if (newElement) {
+			let task = document.createElement("div");
+			task.className = "task";
+			task.setAttribute("data-id", randomIdNumber);
+			task.textContent = inputField.value;
+			let del = document.createElement("button");
+			del.id = "delete";
+			del.textContent = "Delete";
+			task.append(del);
+			tasksWrapper.append(task);
+			return;
+		}
+		// Render elements which are stored in the localStorage.
+		elements.forEach((el) => {
+			let task = document.createElement("div");
+			task.classList.add("task");
+			task.setAttribute("data-id", el.id);
+			if (el.done) task.classList.add("done"); // additional part to highlight the done tasks 
+			task.textContent = el.title;
+			let del = document.createElement("button");
+			del.id = "delete";
+			del.textContent = "Delete";
+			task.append(del);
+			tasksWrapper.append(task);
+		});
+	}
+
+	function addToLocalStorage() {
+		let currentTask = {
+			id: randomIdNumber,
+			title: inputField.value,
+			// done: false
+		};
+		inputField.value = "";
+		if (localStorage.Tasks) {
+			localStorage.setItem("Tasks", JSON.stringify([...JSON.parse(localStorage.Tasks), currentTask])
+			);
+		} else {
+			localStorage.setItem("Tasks", JSON.stringify([currentTask]));
+		}
+	}
+
+	function updateLocalStorage() {
+		let updatedTasks = [...tasksWrapper.children].map((task) => {
+			return {
+				id: task.getAttribute("data-id"),
+				title: task.firstChild.textContent,
+				// done: task.classList.contains("done")
+			};
+		});
+		if (updatedTasks.length !== 0) {
+			localStorage.setItem("Tasks", JSON.stringify(updatedTasks));
+		} else localStorage.removeItem("Tasks");
+	}
+};
+
+stickyNotes();
 
 //#################################################################################//
-
 
 //----------------------- //
 // ASSIGNMENTS (111 - 114) //    Not solved  
@@ -2114,6 +2524,10 @@ console.log(solution); // Elzero Web School
 
 
 //--------------------------------------------------------------------------------//
+
+// Assignment (2 of 2)
+
+
 
 //#################################################################################//
 
