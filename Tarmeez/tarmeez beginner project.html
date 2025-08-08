@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
 
    <!-- Google Fonts -->
    <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,7 +37,7 @@
 
       .header button {
          position: absolute;
-          right: 10px;
+         right: 10px;
       }
 
       .task {
@@ -82,61 +82,61 @@
 
    <div style="direction: rtl;">
       <!-- Center DIV -->
-    <div style="display: flex; justify-content: center ; align-items: center;">
+   <div style="display: flex; justify-content: center ; align-items: center;">
          <!-- Tasks Table -->
-          <div class="tasks-table" >
+         <div class="tasks-table" >
 
             <!-- Header -->
             <div class="header">
-                <h1 style="color: white; margin-block: 10px ;">مهامي</h1>
-                <button id="add-btn" class="circular">
+               <h1 style="color: white; margin-block: 10px ;">مهامي</h1>
+               <button id="add-btn" class="circular">
                   <span class="material-symbols-rounded">add</span>
-                </button>
+               </button>
             </div>
             <!--// Header //-->
 
             <!-- Tasks -->
             <div id="tasks" style="padding: 10px;">
 
-                <!-- Task -->
-                <div class="task">
+               <!-- Task -->
+               <div class="task">
 
                   <!-- Task Info -->
                   <div style="width: 55%;">
-                      <h2 >قراءة كتاب</h2>
-                      <div>
+                     <h2 >قراءة كتاب</h2>
+                     <div>
                         <span class="material-symbols-outlined">calendar_month</span>
                         <span>10/10/2022</span>
-                      </div>
-                      </div>
+                     </div>
+                     </div>
                       <!--// Task Info //-->
 
-                      <!-- Task Actions -->
-                      <div style="width: 35%; display: flex; justify-content: space-between;  " >
+                     <!-- Task Actions -->
+                     <div style="width: 35%; display: flex; justify-content: space-between;  " >
                         <button class="circular" style="background-color: rgb(114, 0, 0);color: white ;cursor: pointer;">
-                            <span class="material-symbols-outlined">delete</span>
+                           <span class="material-symbols-outlined">delete</span>
                         </button>
                         <button class="circular" style="background-color: rgb(0, 150, 30);color: white;cursor: pointer;">
-                            <span class="material-symbols-outlined">check</span>
+                           <span class="material-symbols-outlined">check</span>
                         </button>
                         <button class="circular" style="background-color: rgb(0 , 16, 197);color: white;cursor: pointer;">
-                            <span class="material-symbols-outlined">edit</span>
+                           <span class="material-symbols-outlined">edit</span>
                         </button>
-                      </div>
+                     </div>
                       <!--// Task Actions //-->
 
-                </div>
+               </div>
                 <!--// Task //-->
 
 
             </div>
             <!--// Tasks //-->
-          </div>
+         </div>
           <!--// Tasks Table //-->
       </div>
       <!--// Center DIV //-->
-    </div>
-  
+   </div>
+
 </body>
 
 <script>
@@ -171,7 +171,7 @@
    // }
 
    // ==== the same meaning for the above ==== //
-    tasks = retrievedTasks ?? []
+   tasks = retrievedTasks ?? []
 
    function fillTasksOnThePage(){
 
@@ -200,16 +200,16 @@
                   </button>
 
                   ${task.isDone?
-                   `
+                  `
                      <button onclick="toggleTaskCompletion (${index})" class="circular" style="background-color: rgb(118, 0, 101);color: white;cursor: pointer;">
                      <span class="material-symbols-outlined">cancel</span>
                      </button>
-                   `:
-                   `
+                  `:
+                  `
                      <button onclick="toggleTaskCompletion(${index})" class="circular" style="background-color: rgb(0, 150, 30);color: white;cursor: pointer;">
                      <span class="material-symbols-outlined">check</span>
                      </button>
-                   `}
+                  `}
 
                   <button onclick="editTask(${index})" class="circular" style="background-color: rgb(0 , 16, 197);color: white;cursor: pointer;">
                      <span class="material-symbols-outlined">edit</span>
@@ -281,7 +281,7 @@
       let tasksString = JSON.stringify(tasks);
       localStorage.setItem("myTasks" , tasksString);
    }
- 
+
 </script>
 
 </html>

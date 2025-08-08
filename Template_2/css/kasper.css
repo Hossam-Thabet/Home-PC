@@ -1,9 +1,9 @@
 /* Start Variables */
- :root {
+:root {
   --main-color: #19c8fa;
   --transparent-color: rgb(15 116 143 / 70%);
-  --section-padding: 100px;
- }
+  --section-padding: 100px; 
+}
 /* End Variables */
 /* Start Global Rules */
 * {
@@ -31,26 +31,29 @@ ul {
 @media (min-width: 768px) {
   .container {
     width: 750px;
-     
   }
 }
+
 /* Medium Screen */
 @media (min-width: 992px) {
   .container {
     width: 970px;
   }
 }
+
 /* large Screen */
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
   }
 }
+
 /* End Global Rules */
 /* Start Components */
 .main-heading {
   text-align: center;
 }
+
 .main-heading h2 {
   font-weight: normal;
   font-size: 40px;
@@ -58,6 +61,7 @@ ul {
   margin-bottom: 70px;
   text-transform: uppercase;
 }
+
 .main-heading h2::before {
   content: "";
   position: absolute;
@@ -68,6 +72,7 @@ ul {
   bottom: -30px;
   width: 120px;
 }
+
 .main-heading h2::after {
   content: "";
   position: absolute;
@@ -80,6 +85,7 @@ ul {
   bottom: -38px;
   background-color: white;
 }
+
 .main-heading p {
   width: 550px;
   margin: 0 auto 100px;
@@ -87,6 +93,7 @@ ul {
   line-height: 2;
   color: #777;
 }
+
 /* End Components */
 /* Start Header */
 header {
@@ -95,21 +102,22 @@ header {
   width: 100%;
   z-index: 2;
 }
-  header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    min-height: 97px;
-  }
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  min-height: 97px;
+}
   header .container:after {
-     content: "";
-     position: absolute;
-     width: calc(100% - 30px);
-     height: 1px;
-     bottom: 0;
-     background-color: #a2a2a2;
-     left: 15px;
+    content: "";
+    position: absolute;
+    width: calc(100% - 30px);
+    height: 1px;
+    bottom: 0;
+    background-color: #a2a2a2;
+    left: 15px;
   }
   header .logo img {
     height: 40px;
@@ -180,6 +188,7 @@ header {
     transform: translateY(-50%);
     top: 50%;
   }
+
 /* End Header */
 /* Start landing  */
   .landing {
@@ -810,7 +819,5 @@ height: 200px;
   border: none;
   color: white;
 }
-
-
 
 /* end Contact Us */
